@@ -20,7 +20,7 @@
     }
 
     header {
-      background: linear-gradient(rgba(15,15,20,0.65), rgba(15,15,20,0.75)),
+      background: linear-gradient(rgba(15,15,20,0.70), rgba(15,15,20,0.80)),
                   url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
       min-height: 100vh;
       display: flex;
@@ -31,15 +31,25 @@
     }
 
     .hero {
-      max-width: 800px;
+      max-width: 850px;
       background: rgba(0, 0, 0, 0.35);
-      padding: 40px 25px;
-      border-radius: 20px;
-      backdrop-filter: blur(3px);
+      padding: 45px 28px;
+      border-radius: 22px;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .logo-mark {
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      color: #00c6ff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 44px;
       margin-bottom: 12px;
       letter-spacing: 1px;
     }
@@ -47,12 +57,12 @@
     .hero p {
       font-size: 18px;
       color: #e5e5e5;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 28px;
+      padding: 14px 30px;
       background: linear-gradient(135deg, #7b2ff7, #00c6ff);
       color: white;
       text-decoration: none;
@@ -63,12 +73,12 @@
     }
 
     .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+      transform: translateY(-3px);
+      opacity: 0.96;
     }
 
     .section {
-      padding: 70px 20px;
+      padding: 75px 20px;
     }
 
     .container {
@@ -79,14 +89,14 @@
     .section-title {
       text-align: center;
       font-size: 32px;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     .section-subtitle {
       text-align: center;
       color: #cfcfcf;
       max-width: 700px;
-      margin: 0 auto 40px;
+      margin: 0 auto 42px;
     }
 
     .services {
@@ -168,6 +178,11 @@
       .section-title {
         font-size: 26px;
       }
+
+      .logo-mark {
+        font-size: 15px;
+        letter-spacing: 3px;
+      }
     }
   </style>
 </head>
@@ -175,8 +190,9 @@
 
   <header>
     <div class="hero">
-      <h1>Glen-Sha Lights & Sounds</h1>
-      <p>Professional lights, sound system, and event setup for parties, weddings, birthdays, and special occasions.</p>
+      <div class="logo-mark">🔊 GLEN-SHA</div>
+      <h1>Lights & Sounds</h1>
+      <p>Professional lights, sound system, and event setup for weddings, birthdays, parties, and special occasions.</p>
       <a href="https://www.facebook.com/" class="btn" target="_blank">Book Now</a>
     </div>
   </header>
@@ -202,7 +218,7 @@
         <div class="card">
           <div class="icon">🎤</div>
           <h3>Mic & Event Support</h3>
-          <p>Ready ang microphones at basic support para smooth ang program flow.</p>
+          <p>Ready ang microphones at basic support para smooth ang flow ng program.</p>
         </div>
 
         <div class="card">
