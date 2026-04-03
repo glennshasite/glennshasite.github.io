@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glen-Sha Lights & Sounds</title>
 
   <style>
@@ -12,15 +12,23 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: #0f0f12;
+      background: #0c0c12;
       color: white;
       line-height: 1.6;
     }
 
-    /* HERO */
-    header {
+    a {
+      text-decoration: none;
+    }
+
+    /* HERO */⁹
+    .hero-section {
       position: relative;
       min-height: 100vh;
       display: flex;
@@ -28,180 +36,341 @@
       justify-content: center;
       text-align: center;
       padding: 40px 20px;
-      background: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(7, 7, 12, 0.45), rgba(7, 7, 12, 0.75)),
+        url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     }
 
-    header::before {
+    .hero-section::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.55);
-      backdrop-filter: blur(5px);
+      backdrop-filter: blur(4px);
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.40),
+        rgba(0,0,0,0.65)
+      );
     }
 
-    .hero {
+    .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 800px;
+      width: 100%;
+      max-width: 950px;
+      padding: 38px 24px;
+      border-radius: 26px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-logo {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      margin-bottom: 22px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 8px 16px;
+      border-radius: 999px;
       background: rgba(255,255,255,0.08);
-      padding: 30px 20px;
-      border-radius: 20px;
+      color: #f0f0f0;
+      margin-bottom: 18px;
     }
 
-    .logo {
-      width: 100px;
-      margin-bottom: 15px;
+    .hero-content h1 {
+      font-size: 50px;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
     }
 
-    .hero h1 {
-      font-size: 42px;
+    .hero-content h2 {
+      font-size: 28px;
+      color: #ff9f43;
+      margin-bottom: 14px;
+      font-weight: 700;
     }
 
-    .hero h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #ddd;
+    .hero-text {
+      max-width: 740px;
+      margin: 0 auto 24px;
+      color: #dddddd;
+      font-size: 16px;
     }
 
-    .hero p {
-      color: #ccc;
-      font-size: 15px;
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
     }
 
-    /* SECTION */
+    .btn {
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.28);
+      color: white;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.10);
+    }
+
+    .hero-tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-tags span {
+      padding: 8px 14px;
+      font-size: 13px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #f2f2f2;
+    }
+
+    /* SECTIONS */
     section {
-      padding: 70px 20px;
+      padding: 75px 20px;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      text-align: center;
     }
 
-    h2 {
-      margin-bottom: 25px;
-      font-size: 30px;
+    .section-title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      color: #cccccc;
+      font-size: 16px;
     }
 
     /* SERVICES */
-    .grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
     }
 
-    .card {
-      background: #1a1a22;
-      padding: 25px;
-      border-radius: 15px;
-      transition: 0.3s;
+    .service-card {
+      background: linear-gradient(180deg, #171721, #12121a);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.22);
+      transition: 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .service-card:hover {
+      transform: translateY(-6px);
     }
 
-    .card h3 {
+    .service-card h3 {
+      font-size: 21px;
       margin-bottom: 10px;
+      color: #ffffff;
     }
 
-    .card p {
-      font-size: 14px;
-      color: #ccc;
+    .service-card p {
+      color: #cfcfcf;
+      font-size: 15px;
     }
 
     /* ABOUT + CONTACT */
-    .box {
-      background: #1a1a22;
-      padding: 25px;
-      border-radius: 15px;
-      max-width: 700px;
+    .info-box {
+      max-width: 850px;
       margin: auto;
+      background: linear-gradient(180deg, #171721, #12121a);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 22px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.22);
     }
 
+    .info-box p {
+      color: #d7d7d7;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .contact-lines p {
+      margin-bottom: 12px;
+    }
+
+    /* FOOTER */
     footer {
+      padding: 22px 15px;
       text-align: center;
-      padding: 20px;
-      background: #0a0a0d;
+      background: #08080d;
+      color: #bfbfbf;
       font-size: 14px;
-      color: #bbb;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 30px 18px;
+      }
+
+      .hero-logo {
+        max-width: 340px;
+      }
+
+      .hero-content h1 {
+        font-size: 34px;
+      }
+
+      .hero-content h2 {
+        font-size: 22px;
+      }
+
+      .hero-text {
+        font-size: 14px;
+      }
+
+      .section-title {jm
+        font-size: 28px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <header>
-    <div class="hero">
-      <img src="logo1.png" class="logo">
+  <header class="hero-section">
+    <div class="hero-content">
+      <img src="logo1.png" alt="Glen-Sha Lights & Sounds Logo" class="hero-logo">
 
-      <h1>GLEN-SHA</h1>
+      <p class="hero-label">Professional Event Audio Service</p>
+
+      <h1>Glen-Sha’s</h1>
       <h2>Lights & Sounds</h2>
 
-      <p>
-        Professional sound system for all types of events.
+      <p class="hero-text">
+        Bringing life to your events through quality sound, smooth setup,
+        and dependable service for birthdays, debuts, weddings, school programs,
+        and special occasions.
       </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Book Now</a>
+        <a href="#services" class="btn btn-secondary">View Services</a>
+      </div>
+
+      <div class="hero-tags">
+        <span>Birthday & Debut</span>
+        <span>Weddings</span>
+        <span>School Events</span>
+        <span>Corporate Events</span>
+        <span>Community Events</span>
+      </div>
     </div>
   </header>
 
-  <!-- SERVICES -->
-  <section>
+  <section id="services">
     <div class="container">
-      <h2>Our Services</h2>
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        We provide sound system services for different kinds of events with
+        professional setup and reliable performance.
+      </p>
 
-      <div class="grid">
-        
-        <div class="card">
+      <div class="services-grid">
+        <div class="service-card">
           <h3>Birthday & Debut</h3>
-          <p>Complete sound setup for celebrations and special occasions.</p>
+          <p>Complete sound setup for fun, lively, and memorable celebrations.</p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
           <h3>Weddings</h3>
-          <p>Clean and elegant sound for your big day.</p>
+          <p>Clean and elegant audio setup for your most special day.</p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
           <h3>School Events</h3>
-          <p>Reliable audio for programs and performances.</p>
+          <p>Reliable sound for programs, performances, and recognition events.</p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
           <h3>Corporate Events</h3>
-          <p>Professional setup for meetings and launches.</p>
+          <p>Professional setup for launches, presentations, and formal gatherings.</p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
           <h3>Community Events</h3>
-          <p>Barangay and local event sound system services.</p>
+          <p>Quality audio service for barangay and local celebrations.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section>
+  <section id="about">
     <div class="container">
-      <h2>About Us</h2>
-      <div class="box">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-subtitle">
+        Sound service you can count on for small and big occasions.
+      </p>
+
+      <div class="info-box">
         <p>
-          Glen-Sha Lights & Sounds provides reliable and quality sound system services.
+          Glen-Sha Lights & Sounds is committed to providing clear audio,
+          smooth setup, and dependable event support.
         </p>
         <p>
-          We aim to make every event smooth, lively, and memorable.
+          Our goal is to make every celebration more lively, organized,
+          and memorable through quality service and professional presentation.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section>
+  <section id="contact">
     <div class="container">
-      <h2>Contact Us</h2>
-      <div class="box">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">
+        Reach out to us for bookings and inquiries.
+      </p>
+
+      <div class="info-box contact-lines">
         <p><strong>Phone:</strong> 09XXXXXXXXX</p>
         <p><strong>Facebook:</strong> Glen-Sha Lights & Sounds</p>
         <p><strong>Location:</strong> Your Address Here</p>
@@ -209,9 +378,8 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Glen-Sha Lights & Sounds</p>
+    © 2026 Glen-Sha Lights & Sounds. All rights reserved.
   </footer>
 
 </body>
