@@ -1,104 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Glen-Sha Lights & Sounds</title>
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #111;
+      background: #0f0f14;
       color: white;
-      text-align: center;
-   }
+      line-height: 1.6;
+    }
 
     header {
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      padding: 40px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-    .section {
-      padding: 40px 20px;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .card {
-      background: #222;
+      background: linear-gradient(rgba(15,15,20,0.65), rgba(15,15,20,0.75)),
+                  url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero {
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 40px 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(3px);
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e5e5e5;
+      margin-bottom: 25px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #2575fc;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #7b2ff7, #00c6ff);
       color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 999px;
       font-weight: bold;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
 
     .btn:hover {
-      background: #1a5edb;
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #cfcfcf;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: #1a1a24;
+      padding: 28px 20px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+      transition: 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card .icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #cfcfcf;
+    }
+
+    .about-box,
+    .contact-box {
+      background: #181820;
+      border-radius: 20px;
+      padding: 35px 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .about-box p,
+    .contact-box p {
+      color: #d6d6d6;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .contact-box a {
+      margin-top: 15px;
     }
 
     footer {
-      background: #000;
-      padding: 15px;
+      text-align: center;
+      padding: 20px;
+      background: #0a0a0f;
+      color: #aaa;
       font-size: 14px;
-      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <h1>Glen-Sha Lights & Sounds</h1>
-    <p>Professional Sound System • Lights • Events</p>
-    <a href="#contact" class="btn">Book Now</a>
+    <div class="hero">
+      <h1>Glen-Sha Lights & Sounds</h1>
+      <p>Professional lights, sound system, and event setup for parties, weddings, birthdays, and special occasions.</p>
+      <a href="https://www.facebook.com/" class="btn" target="_blank">Book Now</a>
+    </div>
   </header>
 
-  <div class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="card">🔊 Sound System Rental</div>
-      <div class="card">💡 Lights Setup</div>
-      <div class="card">🎤 Event Hosting Support</div>
-      <div class="card">🎉 Party & Wedding Setup</div>
-    </div>
-  </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Complete setup solutions para sa mas lively, elegant, at memorable na event.</p>
 
-  <div class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 0912-345-6789</p>
-    <p>📍 Rizal, Philippines</p>
-    <a href="https://facebook.com" class="btn">Message on Facebook</a>
-  </div>
+      <div class="services">
+        <div class="card">
+          <div class="icon">🔊</div>
+          <h3>Sound System</h3>
+          <p>Malinaw at malakas na audio setup para sa iba’t ibang klaseng event.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">💡</div>
+          <h3>Lighting Setup</h3>
+          <p>Beautiful lights para mas buhay at mas premium tingnan ang venue.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎤</div>
+          <h3>Mic & Event Support</h3>
+          <p>Ready ang microphones at basic support para smooth ang program flow.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎉</div>
+          <h3>Party & Wedding Setup</h3>
+          <p>Bagay para sa birthdays, weddings, reunions, debuts, at iba pa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="about-box">
+        <p>Glen-Sha Lights & Sounds offers reliable and professional event setup services.</p>
+        <p>Goal namin ay magbigay ng quality sound, elegant lighting, at maayos na setup para mas maging special ang bawat okasyon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-box">
+        <p>📞 0912-345-6789</p>
+        <p>📍 Rizal, Philippines</p>
+        <p>📩 Available for inquiries and bookings</p>
+        <a href="https://www.facebook.com/" class="btn" target="_blank">Message Us</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    © 2026 Glen-Sha Lights & Sounds
+    © 2026 Glen-Sha Lights & Sounds. All rights reserved.
   </footer>
 
 </body>
