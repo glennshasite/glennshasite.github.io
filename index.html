@@ -1,210 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>GLENN-SHA Lights & Sounds</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glen-Sha Lights & Sounds</title>
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #05070d;
+      background: #0f0f12;
       color: white;
+      line-height: 1.6;
     }
 
+    /* HERO */
     header {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(0,0,0,0.8);
-      padding: 15px 0;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      z-index: 1000;
+      padding: 40px 20px;
+      background: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     }
 
-    header a {
-      margin: 0 15px;
-      color: #32d8ff;
-      text-decoration: none;
-      font-weight: bold;
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(5px);
     }
 
-    section {
-      padding: 100px 20px;
-      text-align: center;
+    .hero {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      background: rgba(255,255,255,0.08);
+      padding: 30px 20px;
+      border-radius: 20px;
     }
 
     .logo {
-      width: 140px;
-      border-radius: 50%;
-      box-shadow: 0 0 25px cyan;
+      width: 100px;
       margin-bottom: 15px;
     }
 
-    h1 {
-      font-size: 40px;
-      margin: 10px 0;
+    .hero h1 {
+      font-size: 42px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    .hero p {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    /* SECTION */
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
     }
 
     h2 {
-      color: cyan;
+      margin-bottom: 25px;
+      font-size: 30px;
     }
 
-    .tagline {
-      margin: 15px auto;
-      max-width: 600px;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 30px;
-      background: cyan;
-      color: black;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
+    /* SERVICES */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 20px;
     }
 
     .card {
-      background: #111;
-      padding: 25px;
-      margin: 20px auto;
-      max-width: 700px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,255,255,0.2);
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .service-card {
-      background: #111;
+      background: #1a1a22;
       padding: 25px;
       border-radius: 15px;
-      box-shadow: 0 0 12px rgba(0,255,255,0.2);
       transition: 0.3s;
     }
 
-    .service-card:hover {
+    .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 25px cyan;
     }
 
-    .service-card h3 {
+    .card h3 {
       margin-bottom: 10px;
     }
 
-    .service-card p {
+    .card p {
       font-size: 14px;
       color: #ccc;
+    }
+
+    /* ABOUT + CONTACT */
+    .box {
+      background: #1a1a22;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 700px;
+      margin: auto;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #000;
+      background: #0a0a0d;
+      font-size: 14px;
+      color: #bbb;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <a href="#home">Home</a>
-  <a href="#about">About Us</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact Us</a>
-</header>
+  <!-- HERO -->
+  <header>
+    <div class="hero">
+      <img src="logo1.png" class="logo">
 
-<!-- HOME -->
-<section id="home">
-  <img src="logo1.png" class="logo">
-  <h1>GLENN-SHA</h1>
-  <h2>Lights & Sounds</h2>
+      <h1>GLEN-SHA</h1>
+      <h2>Lights & Sounds</h2>
 
-  <p class="tagline">
-    Professional sound and lighting for weddings, birthdays, debuts, and special events.
-  </p>
-
-  <a href="#contact" class="btn">Book Now</a>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="card">
-    <h2>About Us</h2>
-    <p>
-      GLENN-SHA Lights & Sounds provides reliable and professional sound and lighting services for different events. 
-      We focus on clean setup, clear audio, and vibrant lighting to make every celebration more memorable.
-    </p>
-
-    <h3>Our Goal</h3>
-    <p>
-      To deliver quality sound and lighting that enhances every event and creates an unforgettable experience.
-    </p>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="services">
-
-    <div class="service-card">
-      <h3>💍 Weddings</h3>
-      <p>Elegant sound and lighting setup for unforgettable wedding celebrations.</p>
+      <p>
+        Professional sound system for all types of events.
+      </p>
     </div>
+  </header>
 
-    <div class="service-card">
-      <h3>🎂 Birthdays</h3>
-      <p>Fun and lively setup for birthday parties of all ages.</p>
+  <!-- SERVICES -->
+  <section>
+    <div class="container">
+      <h2>Our Services</h2>
+
+      <div class="grid">
+        
+        <div class="card">
+          <h3>Birthday & Debut</h3>
+          <p>Complete sound setup for celebrations and special occasions.</p>
+        </div>
+
+        <div class="card">
+          <h3>Weddings</h3>
+          <p>Clean and elegant sound for your big day.</p>
+        </div>
+
+        <div class="card">
+          <h3>School Events</h3>
+          <p>Reliable audio for programs and performances.</p>
+        </div>
+
+        <div class="card">
+          <h3>Corporate Events</h3>
+          <p>Professional setup for meetings and launches.</p>
+        </div>
+
+        <div class="card">
+          <h3>Community Events</h3>
+          <p>Barangay and local event sound system services.</p>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>👑 Debuts</h3>
-      <p>Stylish lights and clear sound for 18th birthday celebrations.</p>
+  <!-- ABOUT -->
+  <section>
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="box">
+        <p>
+          Glen-Sha Lights & Sounds provides reliable and quality sound system services.
+        </p>
+        <p>
+          We aim to make every event smooth, lively, and memorable.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>🎓 School Events</h3>
-      <p>Reliable setup for programs and school activities.</p>
+  <!-- CONTACT -->
+  <section>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="box">
+        <p><strong>Phone:</strong> 09XXXXXXXXX</p>
+        <p><strong>Facebook:</strong> Glen-Sha Lights & Sounds</p>
+        <p><strong>Location:</strong> Your Address Here</p>
+      </div>
     </div>
+  </section>
 
-    <div class="service-card">
-      <h3>🎤 Parties</h3>
-      <p>Strong sound and exciting lighting for private gatherings.</p>
-    </div>
-
-    <div class="service-card">
-      <h3>🎉 Special Events</h3>
-      <p>Flexible setup for any celebration or community event.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="card">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> +63 900 000 0000</p>
-    <p><strong>Facebook:</strong> Add your link here</p>
-    <p><strong>Location:</strong> Your location here</p>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 GLENN-SHA Lights & Sounds</p>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Glen-Sha Lights & Sounds</p>
+  </footer>
 
 </body>
 </html>
