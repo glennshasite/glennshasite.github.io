@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(15, 15, 20, 0.70), rgba(15, 15, 20, 0.82)),
+  background: linear-gradient(rgba(15, 15, 20, 0.72), rgba(15, 15, 20, 0.84)),
               url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
   min-height: 100vh;
   display: flex;
@@ -24,31 +24,53 @@ header {
 
 .hero {
   max-width: 850px;
-  background: rgba(0, 0, 0, 0.35);
-  padding: 45px 28px;
-  border-radius: 22px;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.38);
+  padding: 50px 30px;
+  border-radius: 24px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo-img {
-  width: 160px;
+  width: 170px;
   max-width: 100%;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.4));
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 10px #00c6ff)
+          drop-shadow(0 0 20px rgba(0, 198, 255, 0.85))
+          drop-shadow(0 0 35px rgba(0, 198, 255, 0.55));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px #00c6ff)
+          drop-shadow(0 0 30px rgba(0, 198, 255, 0.95))
+          drop-shadow(0 0 45px rgba(0, 198, 255, 0.7));
 }
 
 .hero h1 {
-  font-size: 44px;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
+  font-size: 46px;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .hero .subtitle {
-  font-size: 20px;
-  color: #f1f1f1;
-  margin-bottom: 10px;
+  font-size: 22px;
+  color: #00d9ff;
+  margin-bottom: 12px;
   font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero .tagline {
+  font-size: 18px;
+  color: #e8e8e8;
+  margin-bottom: 28px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero p {
@@ -59,23 +81,24 @@ header {
 
 .btn {
   display: inline-block;
-  padding: 14px 30px;
+  padding: 14px 32px;
   background: linear-gradient(135deg, #7b2ff7, #00c6ff);
   color: white;
   text-decoration: none;
   border-radius: 999px;
   font-weight: bold;
-  transition: 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  opacity: 0.96;
+  transform: translateY(-4px) scale(1.03);
+  opacity: 0.98;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
 .section {
-  padding: 75px 20px;
+  padding: 80px 20px;
 }
 
 .container {
@@ -85,7 +108,7 @@ header {
 
 .section-title {
   text-align: center;
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 14px;
 }
 
@@ -94,6 +117,7 @@ header {
   color: #cfcfcf;
   max-width: 700px;
   margin: 0 auto 42px;
+  font-size: 16px;
 }
 
 .services {
@@ -104,20 +128,22 @@ header {
 
 .card {
   background: #1a1a24;
-  padding: 28px 20px;
+  padding: 30px 22px;
   border-radius: 18px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.20);
-  transition: 0.3s ease;
-  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+  border-color: rgba(0, 198, 255, 0.25);
 }
 
 .card .icon {
-  font-size: 38px;
+  font-size: 40px;
   margin-bottom: 12px;
 }
 
@@ -134,13 +160,13 @@ header {
 .about-box,
 .contact-box {
   background: #181820;
-  border-radius: 20px;
-  padding: 35px 25px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  border-radius: 22px;
+  padding: 38px 28px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
   max-width: 850px;
   margin: auto;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .about-box p,
@@ -156,14 +182,18 @@ header {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 22px 20px;
   background: #0a0a0f;
   color: #aaa;
   font-size: 14px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 40px 22px;
+  }
+
   .hero h1 {
     font-size: 32px;
   }
@@ -172,6 +202,7 @@ footer {
     font-size: 18px;
   }
 
+  .hero .tagline,
   .hero p {
     font-size: 16px;
   }
@@ -181,6 +212,11 @@ footer {
   }
 
   .logo-img {
-    width: 130px;
+    width: 135px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
   }
 }
