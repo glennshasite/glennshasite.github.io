@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glen-Sha Lights & Sounds</title>
 
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #2575fc;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #1a5edb;
+    }
+
+    footer {
+      background: #000;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Glen-Sha Lights & Sounds</h1>
+    <p>Professional Sound System • Lights • Events</p>
+    <a href="#contact" class="btn">Book Now</a>
+  </header>
+
+  <div class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">🔊 Sound System Rental</div>
+      <div class="card">💡 Lights Setup</div>
+      <div class="card">🎤 Event Hosting Support</div>
+      <div class="card">🎉 Party & Wedding Setup</div>
+    </div>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 0912-345-6789</p>
+    <p>📍 Rizal, Philippines</p>
+    <a href="https://facebook.com" class="btn">Message on Facebook</a>
+  </div>
+
+  <footer>
+    © 2026 Glen-Sha Lights & Sounds
+  </footer>
+
+</body>
+</html>
