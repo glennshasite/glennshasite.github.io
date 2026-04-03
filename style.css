@@ -36,17 +36,17 @@ header {
   width: 170px;
   max-width: 100%;
   margin-bottom: 18px;
-  filter: drop-shadow(0 0 10px #00c6ff)
-          drop-shadow(0 0 20px rgba(0, 198, 255, 0.85))
-          drop-shadow(0 0 35px rgba(0, 198, 255, 0.55));
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 14px rgba(0, 198, 255, 0.55));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo-img:hover {
   transform: scale(1.05);
-  filter: drop-shadow(0 0 15px #00c6ff)
-          drop-shadow(0 0 30px rgba(0, 198, 255, 0.95))
-          drop-shadow(0 0 45px rgba(0, 198, 255, 0.7));
+  filter: drop-shadow(0 0 20px rgba(0, 198, 255, 0.75));
 }
 
 .hero h1 {
