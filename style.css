@@ -1,1 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f14;
+  color: white;
+}
 
+header {
+  background: linear-gradient(rgba(15,15,20,0.7), rgba(15,15,20,0.8)),
+              url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero {
+  background: rgba(0,0,0,0.4);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.logo-img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+p {
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00c6ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.card {
+  background: #1a1a24;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
