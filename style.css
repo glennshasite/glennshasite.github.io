@@ -298,3 +298,16 @@ footer {
   justify-content: center;  /* 👉 ito ang nagpapa-center */
   margin-top: 40px;
 }
+.back-home-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Force center fix */
+.back-home-btn {
+  display: inline-block;
+  text-align: center;
+}
