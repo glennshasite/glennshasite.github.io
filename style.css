@@ -82,13 +82,14 @@ img {
   justify-content: center;
 }
 
-/* 🔥 LOGO GLOW */
+/* LOGO GLOW + FLOAT */
 .hero-logo {
   width: 100%;
   max-width: 360px;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 0 20px rgba(255,123,0,0.7));
+  animation: logoFloatGlow 3.2s ease-in-out infinite;
 }
 
 .hero-right {
@@ -107,7 +108,7 @@ img {
   margin-bottom: 18px;
 }
 
-/* 🔥 GLENN-SHA (SOFT PREMIUM GLOW) */
+/* GLENN-SHA SOFT PREMIUM GLOW */
 .hero-right h1 {
   font-size: 56px;
   line-height: 1.1;
@@ -118,9 +119,10 @@ img {
     0 0 3px rgba(255,255,255,0.65),
     0 0 8px rgba(255,255,255,0.35),
     0 0 16px rgba(255,159,67,0.25);
+  animation: glowPulseTitle 3s ease-in-out infinite;
 }
 
-/* 🔥 LIGHTS & SOUNDS (NEON HIGHLIGHT) */
+/* LIGHTS & SOUNDS NEON HIGHLIGHT */
 .hero-right h2 {
   font-size: 30px;
   color: #ff9f43;
@@ -130,6 +132,7 @@ img {
     0 0 5px rgba(255,179,71,0.9),
     0 0 12px rgba(255,123,0,0.8),
     0 0 25px rgba(255,123,0,0.6);
+  animation: glowPulseSubtitle 2.6s ease-in-out infinite;
 }
 
 .hero-text {
@@ -146,7 +149,7 @@ img {
   margin-bottom: 24px;
 }
 
-/* 🔥 BUTTON GLOW */
+/* BUTTON GLOW */
 .btn {
   padding: 13px 24px;
   border-radius: 999px;
@@ -162,6 +165,7 @@ img {
   box-shadow:
     0 0 10px rgba(255,123,0,0.6),
     0 0 20px rgba(255,123,0,0.5);
+  animation: buttonGlow 2.2s ease-in-out infinite;
 }
 
 .btn-primary:hover {
@@ -230,7 +234,6 @@ section {
   transition: 0.3s ease;
 }
 
-/* 🔥 SERVICE HOVER NEON */
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow:
@@ -250,4 +253,246 @@ section {
   font-size: 15px;
 }
 
-/* (rest unchanged...) */
+/* PORTFOLIO */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.portfolio-card {
+  background: linear-gradient(180deg, #171721, #12121a);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.portfolio-content h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.portfolio-content p {
+  font-size: 14px;
+  color: #d0d0d0;
+}
+
+/* ABOUT + CONTACT */
+.info-box {
+  max-width: 860px;
+  margin: auto;
+  background: linear-gradient(180deg, #171721, #12121a);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+  padding: 34px 26px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.info-box p {
+  color: #d7d7d7;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.contact-lines p {
+  margin-bottom: 12px;
+}
+
+/* BACK HOME */
+.back-home-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 10px;
+}
+
+.back-home-btn {
+  width: auto !important;
+  min-width: 220px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  text-align: center;
+  background: linear-gradient(90deg, #ff7b00, #ffb347);
+  color: white;
+  box-shadow:
+    0 0 10px rgba(255,123,0,0.6),
+    0 0 20px rgba(255,123,0,0.45);
+  animation: buttonGlow 2.2s ease-in-out infinite;
+}
+
+/* FOOTER */
+footer {
+  padding: 22px 15px;
+  text-align: center;
+  background: #08080d;
+  color: #bfbfbf;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .hero-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 34px 22px;
+  }
+
+  .hero-right {
+    text-align: center;
+  }
+
+  .hero-logo {
+    max-width: 300px;
+  }
+
+  .hero-right h1 {
+    font-size: 42px;
+  }
+
+  .hero-right h2 {
+    font-size: 26px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-tags {
+    justify-content: center;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 24px 14px;
+  }
+
+  .hero-box {
+    padding: 26px 16px;
+    gap: 24px;
+    border-radius: 22px;
+  }
+
+  .hero-logo {
+    max-width: 240px;
+  }
+
+  .hero-right h1 {
+    font-size: 34px;
+  }
+
+  .hero-right h2 {
+    font-size: 22px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+  }
+
+  .portfolio-card img {
+    height: 200px;
+  }
+
+  .back-home-btn {
+    width: auto !important;
+    min-width: 220px;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes glowPulseTitle {
+  0%, 100% {
+    text-shadow:
+      0 0 3px rgba(255,255,255,0.65),
+      0 0 8px rgba(255,255,255,0.35),
+      0 0 16px rgba(255,159,67,0.25);
+  }
+  50% {
+    text-shadow:
+      0 0 5px rgba(255,255,255,0.9),
+      0 0 12px rgba(255,255,255,0.5),
+      0 0 22px rgba(255,159,67,0.38);
+  }
+}
+
+@keyframes glowPulseSubtitle {
+  0%, 100% {
+    text-shadow:
+      0 0 5px rgba(255,179,71,0.9),
+      0 0 12px rgba(255,123,0,0.8),
+      0 0 25px rgba(255,123,0,0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 8px rgba(255,179,71,1),
+      0 0 18px rgba(255,123,0,0.95),
+      0 0 35px rgba(255,123,0,0.8);
+  }
+}
+
+@keyframes logoFloatGlow {
+  0%, 100% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 18px rgba(255,123,0,0.65));
+  }
+  50% {
+    transform: translateY(-6px);
+    filter: drop-shadow(0 0 28px rgba(255,123,0,0.9));
+  }
+}
+
+@keyframes buttonGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 10px rgba(255,123,0,0.6),
+      0 0 20px rgba(255,123,0,0.45);
+  }
+  50% {
+    box-shadow:
+      0 0 16px rgba(255,123,0,0.85),
+      0 0 30px rgba(255,123,0,0.65);
+  }
+}
