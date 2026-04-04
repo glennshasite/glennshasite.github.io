@@ -288,3 +288,8 @@ footer {
     font-size: 20px;
   }
 }
+.back-home-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
