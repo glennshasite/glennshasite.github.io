@@ -293,3 +293,8 @@ footer {
   display: flex;
   justify-content: center;
 }
+.back-home-wrapper {
+  display: flex;
+  justify-content: center;  /* 👉 ito ang nagpapa-center */
+  margin-top: 40px;
+}
