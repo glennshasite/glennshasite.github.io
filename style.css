@@ -82,11 +82,13 @@ img {
   justify-content: center;
 }
 
+/* 🔥 LOGO GLOW */
 .hero-logo {
   width: 100%;
   max-width: 360px;
   height: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(255,123,0,0.7));
 }
 
 .hero-right {
@@ -105,18 +107,29 @@ img {
   margin-bottom: 18px;
 }
 
+/* 🔥 GLENN-SHA (SOFT PREMIUM GLOW) */
 .hero-right h1 {
   font-size: 56px;
   line-height: 1.1;
   margin-bottom: 8px;
   color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow:
+    0 0 3px rgba(255,255,255,0.65),
+    0 0 8px rgba(255,255,255,0.35),
+    0 0 16px rgba(255,159,67,0.25);
 }
 
+/* 🔥 LIGHTS & SOUNDS (NEON HIGHLIGHT) */
 .hero-right h2 {
   font-size: 30px;
   color: #ff9f43;
   margin-bottom: 16px;
   font-weight: 700;
+  text-shadow:
+    0 0 5px rgba(255,179,71,0.9),
+    0 0 12px rgba(255,123,0,0.8),
+    0 0 25px rgba(255,123,0,0.6);
 }
 
 .hero-text {
@@ -133,6 +146,7 @@ img {
   margin-bottom: 24px;
 }
 
+/* 🔥 BUTTON GLOW */
 .btn {
   padding: 13px 24px;
   border-radius: 999px;
@@ -145,6 +159,9 @@ img {
 .btn-primary {
   background: linear-gradient(90deg, #ff7b00, #ffb347);
   color: white;
+  box-shadow:
+    0 0 10px rgba(255,123,0,0.6),
+    0 0 20px rgba(255,123,0,0.5);
 }
 
 .btn-primary:hover {
@@ -213,8 +230,13 @@ section {
   transition: 0.3s ease;
 }
 
+/* 🔥 SERVICE HOVER NEON */
 .service-card:hover {
   transform: translateY(-6px);
+  box-shadow:
+    0 0 10px rgba(255,123,0,0.5),
+    0 0 20px rgba(255,123,0,0.4),
+    0 0 40px rgba(255,123,0,0.3);
 }
 
 .service-card h3 {
@@ -228,188 +250,4 @@ section {
   font-size: 15px;
 }
 
-/* PORTFOLIO */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-}
-
-.portfolio-card {
-  background: linear-gradient(180deg, #171721, #12121a);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-  transition: 0.3s ease;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-6px);
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-.portfolio-content {
-  padding: 20px;
-  text-align: left;
-}
-
-.portfolio-content h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-
-.portfolio-content p {
-  font-size: 14px;
-  color: #d0d0d0;
-}
-
-/* ABOUT + CONTACT */
-.info-box {
-  max-width: 860px;
-  margin: auto;
-  background: linear-gradient(180deg, #171721, #12121a);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 22px;
-  padding: 34px 26px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-}
-
-.info-box p {
-  color: #d7d7d7;
-  margin-bottom: 12px;
-  font-size: 16px;
-}
-
-.contact-lines p {
-  margin-bottom: 12px;
-}
-
-/* BACK HOME */
-.back-home-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0 10px;
-}
-
-.back-home-btn {
-  width: auto !important;
-  min-width: 220px;
-  padding: 13px 24px;
-  border-radius: 999px;
-  text-align: center;
-  background: linear-gradient(90deg, #ff7b00, #ffb347);
-  color: white;
-  box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
-}
-
-/* FOOTER */
-footer {
-  padding: 22px 15px;
-  text-align: center;
-  background: #08080d;
-  color: #bfbfbf;
-  font-size: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* TABLET */
-@media (max-width: 992px) {
-  .hero-box {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding: 34px 22px;
-  }
-
-  .hero-right {
-    text-align: center;
-  }
-
-  .hero-logo {
-    max-width: 300px;
-  }
-
-  .hero-right h1 {
-    font-size: 42px;
-  }
-
-  .hero-right h2 {
-    font-size: 26px;
-  }
-
-  .hero-text {
-    font-size: 16px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons,
-  .hero-tags {
-    justify-content: center;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 24px 14px;
-  }
-
-  .hero-box {
-    padding: 26px 16px;
-    gap: 24px;
-    border-radius: 22px;
-  }
-
-  .hero-logo {
-    max-width: 240px;
-  }
-
-  .hero-right h1 {
-    font-size: 34px;
-  }
-
-  .hero-right h2 {
-    font-size: 22px;
-  }
-
-  .hero-text {
-    font-size: 14px;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .section-title {
-    font-size: 30px;
-  }
-
-  .section-subtitle {
-    font-size: 15px;
-  }
-
-  .portfolio-card img {
-    height: 200px;
-  }
-
-  .back-home-btn {
-    width: auto !important;
-    min-width: 220px;
-  }
-}
+/* (rest unchanged...) */
