@@ -1,567 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glen-Sha Lights & Sounds</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Glen-Sha Lights & Sounds</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #090910;
-      color: white;
-      line-height: 1.6;
-    }
+body {
+  font-family: Arial, sans-serif;
+  background: #090910;
+  color: white;
+  line-height: 1.6;
+}
 
-    a {
-      text-decoration: none;
-    }
+a {
+  text-decoration: none;
+}
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    /* HERO */
-    .hero-section {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      overflow: hidden;
-      background:
-        linear-gradient(rgba(7, 7, 12, 0.55), rgba(7, 7, 12, 0.82)),
-        url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-    }
+/* HERO */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background:
+    linear-gradient(rgba(7,7,12,0.6), rgba(7,7,12,0.85)),
+    url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
 
-    .hero-section::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      backdrop-filter: blur(4px);
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.18),
-        rgba(0, 0, 0, 0.35),
-        rgba(0, 0, 0, 0.62)
-      );
-    }
+.hero-box {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 40px;
+  align-items: center;
+  background: rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 40px;
+}
 
-    .hero-box {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 1200px;
-      display: grid;
-      grid-template-columns: 420px 1fr;
-      gap: 40px;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 28px;
-      padding: 42px;
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(8px);
-    }
+.hero-left {
+  display: flex;
+  justify-content: center;
+}
 
-    .hero-left {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.hero-logo {
+  max-width: 300px;
+}
 
-    .hero-logo {
-      width: 100%;
-      max-width: 360px;
-      height: auto;
-      object-fit: contain;
-    }
+.hero-right h1 {
+  font-size: 50px;
+}
 
-    .hero-right {
-      text-align: left;
-    }
+.hero-right h2 {
+  color: #ff9f43;
+  margin-bottom: 10px;
+}
 
-    .hero-label {
-      display: inline-block;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 8px 16px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      color: #f0f0f0;
-      margin-bottom: 18px;
-    }
+.hero-text {
+  margin: 15px 0;
+}
 
-    .hero-right h1 {
-      font-size: 56px;
-      line-height: 1.1;
-      margin-bottom: 8px;
-      color: #ffffff;
-    }
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    .hero-right h2 {
-      font-size: 30px;
-      color: #ff9f43;
-      margin-bottom: 16px;
-      font-weight: 700;
-    }
+/* BUTTON */
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
 
-    .hero-text {
-      max-width: 680px;
-      color: #dddddd;
-      font-size: 18px;
-      margin-bottom: 26px;
-    }
+.btn-primary {
+  background: linear-gradient(90deg, #ff7b00, #ffb347);
+  color: white;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
+.btn-secondary {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
 
-    .btn {
-      padding: 13px 24px;
-      border-radius: 999px;
-      font-weight: bold;
-      transition: 0.3s ease;
-      display: inline-block;
-    }
+/* SECTION */
+section {
+  padding: 70px 20px;
+}
 
-    .btn-primary {
-      background: linear-gradient(90deg, #ff7b00, #ffb347);
-      color: white;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-    }
+.section-title {
+  text-align: center;
+  font-size: 32px;
+}
 
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      color: white;
-      background: rgba(255, 255, 255, 0.04);
-    }
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ccc;
+}
 
-    .btn-secondary:hover {
-      transform: translateY(-2px);
-      background: rgba(255, 255, 255, 0.10);
-    }
+/* SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
 
-    .hero-tags {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
+.service-card {
+  background: #14141d;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+}
 
-    .hero-tags span {
-      padding: 8px 14px;
-      font-size: 13px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #f2f2f2;
-    }
+/* PORTFOLIO */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-    /* GENERAL SECTIONS */
-    section {
-      padding: 78px 20px;
-    }
+.portfolio-card {
+  background: #14141d;
+  border-radius: 16px;
+  overflow: hidden;
+}
 
-    .container {
-      max-width: 1150px;
-      margin: auto;
-    }
+.portfolio-card img {
+  height: 200px;
+  object-fit: cover;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 38px;
-      margin-bottom: 14px;
-    }
+/* INFO */
+.info-box {
+  background: #14141d;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+}
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 38px;
-      color: #cccccc;
-      font-size: 17px;
-    }
+/* BACK HOME */
+.back-home-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
 
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
-    }
+.back-home-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff7b00, #ffb347);
+  color: white;
+  font-weight: bold;
+}
 
-    .service-card {
-      background: linear-gradient(180deg, #171721, #12121a);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 20px;
-      padding: 30px 24px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-      transition: 0.3s ease;
-    }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #08080d;
+}
 
-    .service-card:hover {
-      transform: translateY(-6px);
-    }
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-    .service-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #ffffff;
-    }
+  .hero-buttons {
+    flex-direction: column;
+  }
 
-    .service-card p {
-      color: #cfcfcf;
-      font-size: 15px;
-    }
-
-    /* PORTFOLIO */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
-
-    .portfolio-card {
-      background: linear-gradient(180deg, #171721, #12121a);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-      transition: 0.3s ease;
-    }
-
-    .portfolio-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .portfolio-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .portfolio-content {
-      padding: 20px;
-      text-align: left;
-    }
-
-    .portfolio-content h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-      color: #ffffff;
-    }
-
-    .portfolio-content p {
-      font-size: 14px;
-      color: #d0d0d0;
-    }
-
-    /* ABOUT + CONTACT */
-    .info-box {
-      max-width: 860px;
-      margin: auto;
-      background: linear-gradient(180deg, #171721, #12121a);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 22px;
-      padding: 34px 26px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-    }
-
-    .info-box p {
-      color: #d7d7d7;
-      margin-bottom: 12px;
-      font-size: 16px;
-    }
-
-    .contact-lines p {
-      margin-bottom: 12px;
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 22px 15px;
-      text-align: center;
-      background: #08080d;
-      color: #bfbfbf;
-      font-size: 14px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    /* TABLET */
-    @media (max-width: 992px) {
-      .hero-box {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding: 34px 22px;
-      }
-
-      .hero-right {
-        text-align: center;
-      }
-
-      .hero-logo {
-        max-width: 300px;
-      }
-
-      .hero-right h1 {
-        font-size: 42px;
-      }
-
-      .hero-right h2 {
-        font-size: 26px;
-      }
-
-      .hero-text {
-        font-size: 16px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-buttons,
-      .hero-tags {
-        justify-content: center;
-      }
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .hero-section {
-        padding: 24px 14px;
-      }
-
-      .hero-box {
-        padding: 26px 16px;
-        gap: 24px;
-        border-radius: 22px;
-      }
-
-      .hero-logo {
-        max-width: 240px;
-      }
-
-      .hero-right h1 {
-        font-size: 34px;
-      }
-
-      .hero-right h2 {
-        font-size: 22px;
-      }
-
-      .hero-text {
-        font-size: 14px;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .section-title {
-        font-size: 30px;
-      }
-
-      .section-subtitle {
-        font-size: 15px;
-      }
-
-      .portfolio-card img {
-        height: 200px;
-      }
-    }
-  </style>
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <header id="home" class="hero-section">
-    <div class="hero-box">
-      <div class="hero-left">
-        <img src="logo1.png" alt="Glen-Sha Lights & Sounds Logo" class="hero-logo">
-      </div>
-
-      <div class="hero-right">
-        <p class="hero-label">Professional Event Audio Service</p>
-
-        <h1>Glen-Sha’s</h1>
-        <h2>Lights & Sounds</h2>
-
-        <p class="hero-text">
-          Bringing life to your events through quality sound, smooth setup,
-          and dependable service for birthdays, debuts, weddings, school programs,
-          and special occasions.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Book Now</a>
-          <a href="#services" class="btn btn-secondary">View Services</a>
-        </div>
-
-        <div class="hero-tags">
-          <span>Birthday & Debut</span>
-          <span>Weddings</span>
-          <span>School Events</span>
-          <span>Corporate Events</span>
-          <span>Community Events</span>
-        </div>
-      </div>
+<header id="home" class="hero-section">
+  <div class="hero-box">
+    <div class="hero-left">
+      <img src="logo1.png" class="hero-logo">
     </div>
-  </header>
 
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">
-        We provide sound system services for different kinds of events with
-        professional setup and reliable performance.
+    <div class="hero-right">
+      <h1>Glen-Sha’s</h1>
+      <h2>Lights & Sounds</h2>
+      <p class="hero-text">
+        Bringing life to your events through quality sound and dependable service.
       </p>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>Birthday & Debut</h3>
-          <p>Complete sound setup for fun, lively, and memorable celebrations.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Weddings</h3>
-          <p>Clean and elegant audio setup for your most special day.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>School Events</h3>
-          <p>Reliable sound for programs, performances, and recognition events.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Corporate Events</h3>
-          <p>Professional setup for launches, presentations, and formal gatherings.</p>
-        </div>
-
-        <div class="service-card">
-          <h3>Community Events</h3>
-          <p>Quality audio service for barangay and local celebrations.</p>
-        </div>
-        
-        <div class="service-card">
-    <h3>Videoke Rental</h3>
-    <p>Affordable videoke rental for parties, family gatherings, and special occasions.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Book Now</a>
+        <a href="#services" class="btn btn-secondary">View Services</a>
+      </div>
+    </div>
   </div>
-        
-        <div class="service-card">
-    <h3>Piano / Keyboard Rental</h3>
-    <p>Keyboard rental available for events, performances, and musical programs.</p>
+</header>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services-grid">
+      <div class="service-card">Birthday & Debut</div>
+      <div class="service-card">Weddings</div>
+      <div class="service-card">School Events</div>
+      <div class="service-card">Corporate Events</div>
+      <div class="service-card">Community Events</div>
+      <div class="service-card">Videoke Rental</div>
+      <div class="service-card">Keyboard Rental</div>
+    </div>
   </div>
+</section>
 
-      </div>
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="info-box">
+      <p>📞 09052063706</p>
+      <p>📍 Claveria, Cagayan</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="portfolio">
-    <div class="container">
-      <h2 class="section-title">Events Covered</h2>
-      <p class="section-subtitle">
-        Some of the events and occasions we have handled.
-      </p>
-
-      <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <img src="event1.jpg" alt="Birthday and Debut Event">
-          <div class="portfolio-content">
-            <h3>Birthday & Debut</h3>
-            <p>Sound system setup for lively and memorable celebrations.</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <img src="event2.jpg" alt="Wedding Event">
-          <div class="portfolio-content">
-            <h3>Wedding Event</h3>
-            <p>Elegant audio support for your most special day.</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <img src="event3.jpg" alt="School Program">
-          <div class="portfolio-content">
-            <h3>School Program</h3>
-            <p>Reliable setup for performances, recognition, and school gatherings.</p>
-          </div>
-        </div>
-
-        <div class="portfolio-card">
-          <img src="event4.jpg" alt="Community Event">
-          <div class="portfolio-content">
-            <h3>Community Event</h3>
-            <p>Professional sound service for barangay and local occasions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">About Us</h2>
-      <p class="section-subtitle">
-        Sound service you can count on for small and big occasions.
-      </p>
-
-      <div class="info-box">
-        <p>
-          Glen-Sha Lights & Sounds is committed to providing clear audio,
-          smooth setup, and dependable event support.
-        </p>
-        <p>
-          Our goal is to make every celebration more lively, organized,
-          and memorable through quality service and professional presentation.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="section-subtitle">
-        Reach out to us for bookings and inquiries.
-      </p>
-
-      <div class="info-box contact-lines">
-        <p><strong>Phone:</strong> 09052063706</p>
-        <p><strong>Email address:</strong> <a href="mailto:Glennsha.lihgts@gmail.com" style="color:#ffb347;">Glennsha.lihgts@gmail.com</a></p>
-        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1AFpgwCBfH/" target="_blank" style="color:#ffb347;">Visit our Facebook Page</a></p>
-        <p><strong>Location:</strong> Kapannikian, Claveria, Cagayan Valley</p>
-      </div>
-    </div>
-  </section>
 <div class="back-home-wrapper">
-  <a href="#home" class="btn back-home-btn">← Back to Home</a>
+  <a href="#home" class="back-home-btn">← Back to Home</a>
 </div>
 
 <footer>
-  © 2026 Glen-Sha Lights & Sounds | All rights reserved.
+  © 2026 Glen-Sha Lights & Sounds
 </footer>
 
 </body>
