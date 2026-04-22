@@ -1,251 +1,1001 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Glenn-Sha Lights & Sounds | Sound System Rental in Tuguegarao, Claveria & Cagayan Valley</title>
+  <title>Glenn-Sha Lights & Sounds | Sound System Rental in Tuguegarao, Claveria & Cagayan Valley</title>
 
-<meta name="description" content="Glenn-Sha Lights & Sounds offers professional sound system rental, lights and event setup services in Tuguegarao, Claveria, and across Cagayan Valley." />
+  <meta name="description" content="Glenn-Sha Lights & Sounds offers professional sound system rental, lights and event setup services in Tuguegarao, Claveria, and across Cagayan Valley for weddings, birthdays, school programs, corporate events, and special occasions." />
+  <meta name="keywords" content="Glenn-Sha Lights and Sounds, sound system rental Tuguegarao, lights and sounds Cagayan Valley, sound system Claveria Cagayan, event setup Tuguegarao, wedding sound system Cagayan, birthday sound system Tuguegarao, school event audio Cagayan Valley, corporate event sound system Tuguegarao" />
+  <meta name="author" content="Glenn-Sha Lights & Sounds" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#090910" />
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial;background:#090910;color:white}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Glenn-Sha Lights & Sounds" />
+  <meta property="og:description" content="Professional sound system rental and event setup services in Tuguegarao, Claveria, and Cagayan Valley." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="logo1.png" />
 
-a{text-decoration:none;color:inherit}
-img{width:100%;display:block}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* NAV */
-.site-nav{
-position:sticky;top:0;z-index:999;
-background:rgba(8,8,13,0.8);
-padding:15px;
-display:flex;
-justify-content:space-between;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* HERO */
-.hero{padding:80px 20px;text-align:center}
+    body {
+      font-family: Arial, sans-serif;
+      background: #090910;
+      color: white;
+      line-height: 1.6;
+    }
 
-/* SECTIONS */
-section{padding:70px 20px}
-.container{max-width:1100px;margin:auto}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* SERVICES */
-.services-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-.service-card{
-background:#12121a;
-padding:25px;
-border-radius:16px;
-text-align:center;
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-/* EVENTS */
-.portfolio-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-.portfolio-card{
-background:#12121a;
-border-radius:18px;
-overflow:hidden;
-}
-.portfolio-content{padding:15px}
+    /* NAVBAR */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(8, 8, 13, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    }
 
-/* INNER EVENTS */
-.inner-event-list{margin-top:12px}
-.inner-event-item{
-display:block;
-padding:10px;
-margin-bottom:8px;
-background:#1a1a24;
-border-radius:10px;
-}
-.inner-event-item:hover{background:#252533}
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
 
-/* INFO */
-.info-box{
-background:#12121a;
-padding:20px;
-border-radius:16px;
-text-align:center;
-}
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      min-width: 0;
+    }
 
-/* FOOTER */
-footer{text-align:center;padding:20px;background:#08080d}
-</style>
+    .nav-brand-text {
+      line-height: 1.1;
+    }
+
+    .nav-brand-text strong {
+      display: block;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-brand-text span {
+      display: block;
+      font-size: 12px;
+      color: #ffb347;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #f3f3f3;
+      font-size: 14px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 179, 71, 0.2);
+      color: #ffb347;
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white !important;
+      box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
+    }
+
+    .nav-cta:hover {
+      color: white !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(255, 123, 0, 0.32);
+    }
+
+    /* HERO */
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      overflow: hidden;
+      background:
+        linear-gradient(rgba(7, 7, 12, 0.55), rgba(7, 7, 12, 0.82)),
+        url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.18),
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.62)
+      );
+    }
+
+    .hero-box {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 40px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 28px;
+      padding: 42px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .hero-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-logo {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 16px rgba(255, 159, 67, 0.35));
+      animation: logoFloat 3.2s ease-in-out infinite;
+    }
+
+    .hero-right {
+      text-align: left;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #f0f0f0;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-right h1 {
+      font-size: 56px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      color: #ffffff;
+      text-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-right h2 {
+      font-size: 30px;
+      color: #ff9f43;
+      margin-bottom: 16px;
+      font-weight: 700;
+      text-shadow: 0 0 16px rgba(255, 159, 67, 0.2);
+    }
+
+    .hero-text {
+      max-width: 680px;
+      color: #dddddd;
+      font-size: 18px;
+      margin-bottom: 26px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      position: relative;
+      z-index: 5;
+      cursor: pointer;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white;
+      box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 26px rgba(255, 123, 0, 0.34);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      color: white;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 179, 71, 0.25);
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-tags span {
+      padding: 8px 14px;
+      font-size: 13px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f2f2f2;
+      transition: 0.3s ease;
+    }
+
+    .hero-tags span:hover {
+      border-color: rgba(255, 179, 71, 0.22);
+      color: #ffcf8d;
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL SECTIONS */
+    section {
+      padding: 78px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 3px;
+      margin: 12px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      box-shadow: 0 0 10px rgba(255, 123, 0, 0.28);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+      color: #cccccc;
+      font-size: 17px;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .services-grid > a {
+      display: block;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(23, 23, 33, 0.96), rgba(18, 18, 26, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+      transition: all 0.35s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      height: 100%;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: 20px;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(255, 179, 71, 0.22),
+        rgba(255, 255, 255, 0.06)
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.55;
+      transition: opacity 0.35s ease;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      top: -120%;
+      left: -40%;
+      width: 55%;
+      height: 260%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.06) 35%,
+        rgba(255, 255, 255, 0.18) 50%,
+        rgba(255, 255, 255, 0.06) 65%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(18deg) translateX(-220%);
+      transition: transform 0.9s ease;
+      pointer-events: none;
+    }
+
+    .service-card .top-line {
+      position: absolute;
+      top: 14px;
+      left: 18px;
+      width: 52px;
+      height: 3px;
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      clip-path: polygon(0 0, 88% 0, 100% 50%, 88% 100%, 0 100%);
+      border-radius: 999px;
+      box-shadow:
+        0 0 8px rgba(255, 123, 0, 0.45),
+        0 0 16px rgba(255, 123, 0, 0.20);
+      z-index: 1;
+      transition: 0.35s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.015);
+      box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.30),
+        0 0 16px rgba(255, 179, 71, 0.12);
+      border-color: rgba(255, 179, 71, 0.16);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-card:hover::after {
+      transform: rotate(18deg) translateX(340%);
+    }
+
+    .service-card:hover .top-line {
+      width: 78px;
+    }
+
+    .service-card h3,
+    .service-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      padding-top: 10px;
+    }
+
+    .service-card p {
+      color: #cfcfcf;
+      font-size: 15px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .portfolio-card {
+      position: relative;
+      background: linear-gradient(180deg, #171721, #12121a);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+      transition: 0.35s ease;
+      height: 100%;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 179, 71, 0.18);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26);
+    }
+
+    .portfolio-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-content {
+      padding: 20px;
+      text-align: left;
+    }
+
+    .portfolio-content h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .portfolio-content p {
+      font-size: 14px;
+      color: #d0d0d0;
+    }
+
+    .inner-event-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .inner-event-item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 12px 14px;
+      transition: 0.3s ease;
+    }
+
+    .inner-event-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 179, 71, 0.16);
+    }
+
+    .inner-event-item strong {
+      display: block;
+      font-size: 14px;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .inner-event-item span {
+      display: block;
+      font-size: 13px;
+      color: #cfcfcf;
+      line-height: 1.5;
+    }
+
+    /* ABOUT + CONTACT */
+    .info-box {
+      max-width: 860px;
+      margin: auto;
+      background: linear-gradient(180deg, rgba(23, 23, 33, 0.96), rgba(18, 18, 26, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 22px;
+      padding: 34px 26px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+      transition: 0.35s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .info-box:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 179, 71, 0.14);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
+    }
+
+    .info-box p {
+      color: #d7d7d7;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .contact-lines p {
+      margin-bottom: 12px;
+    }
+
+    .contact-lines a {
+      color: #ffb347;
+    }
+
+    .contact-lines a:hover {
+      color: #ffd49a;
+    }
+
+    /* BACK HOME */
+    .back-home-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0 10px;
+    }
+
+    .back-home-btn {
+      width: auto !important;
+      min-width: 220px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      text-align: center;
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white;
+      box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(255, 123, 0, 0.32);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 22px 15px;
+      text-align: center;
+      background: #08080d;
+      color: #bfbfbf;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* TABLET */
+    @media (max-width: 992px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-brand {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .hero-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 34px 22px;
+      }
+
+      .hero-right {
+        text-align: center;
+      }
+
+      .hero-logo {
+        max-width: 300px;
+      }
+
+      .hero-right h1 {
+        font-size: 42px;
+      }
+
+      .hero-right h2 {
+        font-size: 26px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons,
+      .hero-tags {
+        justify-content: center;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .site-nav {
+        position: sticky;
+      }
+
+      .nav-inner {
+        padding: 12px 14px;
+      }
+
+      .nav-links {
+        gap: 8px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+
+      .hero-section {
+        padding: 24px 14px;
+      }
+
+      .hero-box {
+        padding: 26px 16px;
+        gap: 24px;
+        border-radius: 22px;
+      }
+
+      .hero-logo {
+        max-width: 240px;
+      }
+
+      .hero-right h1 {
+        font-size: 34px;
+      }
+
+      .hero-right h2 {
+        font-size: 22px;
+      }
+
+      .hero-text {
+        font-size: 14px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .section-subtitle {
+        font-size: 15px;
+      }
+
+      .portfolio-card img {
+        height: 200px;
+      }
+
+      .back-home-btn {
+        width: auto !important;
+        min-width: 220px;
+      }
+    }
+
+    @keyframes logoFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav class="site-nav">
-<div>Glenn-Sha Lights & Sounds</div>
-<div>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#portfolio">Events</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <div class="nav-brand-text">
+          <strong>Glenn-Sha</strong>
+          <span>Lights & Sounds</span>
+        </div>
+      </a>
 
-<section id="home" class="hero">
-<h1>Glenn-Sha</h1>
-<h2>Lights & Sounds</h2>
-<p>Professional sound system rental in Cagayan Valley</p>
-</section>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Events & Photos</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<section id="services">
-<div class="container">
-<h2>Our Services</h2>
+  <header id="home" class="hero-section">
+    <div class="hero-box">
+      <div class="hero-left">
+        <img src="logo1.png" alt="Glen-Sha Lights & Sounds Logo" class="hero-logo">
+      </div>
 
-<div class="services-grid">
+      <div class="hero-right">
+        <p class="hero-label">Professional Event Audio Service</p>
 
-<a href="wedding-sound-system.html">
-<div class="service-card">Wedding Events</div>
-</a>
+        <h1>Glenn-Sha</h1>
+        <h2>Lights & Sounds</h2>
 
-<a href="school-event-sound.html">
-<div class="service-card">School Events</div>
-</a>
+        <p class="hero-text">
+          Bringing life to your events through quality sound, smooth setup,
+          and dependable service in Tuguegarao, Claveria, and across Cagayan Valley
+          for birthdays, debuts, weddings, school programs, and special occasions.
+        </p>
 
-<a href="community-event-sound.html">
-<div class="service-card">Community Events</div>
-</a>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Book Now</a>
+          <a href="#services" class="btn btn-secondary">View Services</a>
+        </div>
 
-</div>
-</div>
-</section>
+        <div class="hero-tags">
+          <span>Birthday & Debut</span>
+          <span>Weddings</span>
+          <span>School Events</span>
+          <span>Corporate Events</span>
+          <span>Community Events</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<section id="portfolio">
-<div class="container">
-<h2>Events & Photos</h2>
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        We provide sound system services for different kinds of events with
+        professional setup and reliable performance in Tuguegarao, Claveria,
+        and across Cagayan Valley.
+      </p>
 
-<div class="portfolio-grid">
+      <div class="services-grid">
+        <a href="birthday-sound-system.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Birthday & Debut</h3>
+            <p>Complete sound setup for fun, lively, and memorable celebrations.</p>
+          </div>
+        </a>
 
-<!-- WEDDING -->
-<div class="portfolio-card">
-<img src="event2.jpg">
-<div class="portfolio-content">
-<h3>Wedding Events</h3>
-<p>Elegant wedding celebrations and audio setups we have handled.</p>
+        <a href="wedding-sound-system.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Wedding Events</h3>
+            <p>Clean and elegant audio setup for your most special day.</p>
+          </div>
+        </a>
 
-<div class="inner-event-list">
-<a href="wedding-event-1.html" class="inner-event-item">
-<strong>Wedding Reception</strong>
-<span>Kester & Armeeh wedding celebration setup.</span>
-</a>
+        <a href="school-event-sound.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>School Events</h3>
+            <p>Reliable sound for programs, performances, and recognition events.</p>
+          </div>
+        </a>
 
-<a href="wedding-event-2.html" class="inner-event-item">
-<strong>Garden Wedding</strong>
-<span>Outdoor wedding reception with organized sound support.</span>
-</a>
+        <a href="corporate-event-sound.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Corporate Events</h3>
+            <p>Professional setup for launches, presentations, and formal gatherings.</p>
+          </div>
+        </a>
 
-<a href="wedding-event-3.html" class="inner-event-item">
-<strong>Indoor Wedding Program</strong>
-<span>Clear and dependable setup for a memorable ceremony.</span>
-</a>
-</div>
+        <a href="community-event-sound.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Community Events</h3>
+            <p>Quality audio service for barangay and local celebrations.</p>
+          </div>
+        </a>
 
-</div>
-</div>
+        <div class="service-card">
+          <div class="top-line"></div>
+          <h3>Videoke Rental</h3>
+          <p>Affordable videoke rental for parties, family gatherings, and special occasions.</p>
+        </div>
 
-<!-- SCHOOL -->
-<div class="portfolio-card">
-<img src="event3.jpg">
-<div class="portfolio-content">
-<h3>School Events</h3>
-<p>Recognition, graduation, and moving-up ceremonies we have supported.</p>
+        <div class="service-card">
+          <div class="top-line"></div>
+          <h3>Fuzzy Wire Souvenir</h3>
+          <p>Handcrafted fuzzy wire souvenirs perfect for birthdays, weddings, debuts, and special events.</p>
+        </div>
 
-<div class="inner-event-list">
-<a href="school-event-1.html" class="inner-event-item">
-<strong>Recognition Day</strong>
-<span>Cagayan High School recognition program setup.</span>
-</a>
+        <div class="service-card">
+          <div class="top-line"></div>
+          <h3>Electronic Repair Services</h3>
+          <p>We repair TVs, speakers, amplifiers, mixers, microphones, and other electronic devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a href="school-event-2.html" class="inner-event-item">
-<strong>Graduation Ceremony</strong>
-<span>Cagayan University graduation event audio support.</span>
-</a>
+  <section id="portfolio">
+    <div class="container">
+      <h2 class="section-title">Events & Photos</h2>
+      <p class="section-subtitle">
+        A collection of events and actual setups we have handled in Claveria,
+        Tuguegarao, and nearby areas in Cagayan Valley.
+      </p>
 
-<a href="school-event-3.html" class="inner-event-item">
-<strong>Moving Up Ceremony</strong>
-<span>Grade 12 moving-up ceremony for a school celebration.</span>
-</a>
-</div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="event2.jpg" alt="Wedding Events by Glenn-Sha Lights and Sounds">
+          <div class="portfolio-content">
+            <h3>Wedding Events</h3>
+            <p>Elegant wedding celebrations and audio setups we have handled.</p>
 
-</div>
-</div>
+            <div class="inner-event-list">
+              <a href="wedding-event-1.html" class="inner-event-item">
+                <strong>Wedding Reception</strong>
+                <span>Kester & Armeeh wedding celebration setup.</span>
+              </a>
+              <a href="wedding-event-2.html" class="inner-event-item">
+                <strong>Garden Wedding</strong>
+                <span>Outdoor wedding reception with organized sound support.</span>
+              </a>
+              <a href="wedding-event-3.html" class="inner-event-item">
+                <strong>Indoor Wedding Program</strong>
+                <span>Clear and dependable setup for a memorable ceremony.</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
-<!-- COMMUNITY -->
-<div class="portfolio-card">
-<img src="event4.jpg">
-<div class="portfolio-content">
-<h3>Community Events</h3>
-<p>Local gatherings, barangay programs, and community celebrations.</p>
+        <div class="portfolio-card">
+          <img src="event3.jpg" alt="School Events by Glenn-Sha Lights and Sounds">
+          <div class="portfolio-content">
+            <h3>School Events</h3>
+            <p>Recognition, graduation, and moving-up ceremonies we have supported.</p>
 
-<div class="inner-event-list">
-<a href="community-event-1.html" class="inner-event-item">
-<strong>Barangay Fiesta</strong>
-<span>Professional sound setup for a lively community celebration.</span>
-</a>
+            <div class="inner-event-list">
+              <a href="school-event-1.html" class="inner-event-item">
+                <strong>Recognition Day</strong>
+                <span>Cagayan High School recognition program setup.</span>
+              </a>
+              <a href="school-event-2.html" class="inner-event-item">
+                <strong>Graduation Ceremony</strong>
+                <span>Cagayan University graduation event audio support.</span>
+              </a>
+              <a href="school-event-3.html" class="inner-event-item">
+                <strong>Moving Up Ceremony</strong>
+                <span>Grade 12 moving-up ceremony for a school celebration.</span>
+              </a>
+            </div>
+          </div>
+        </div>
 
-<a href="community-event-2.html" class="inner-event-item">
-<strong>Community Night Program</strong>
-<span>Audio support for local evening activities and presentations.</span>
-</a>
+        <div class="portfolio-card">
+          <img src="event4.jpg" alt="Community Events by Glenn-Sha Lights and Sounds">
+          <div class="portfolio-content">
+            <h3>Community Events</h3>
+            <p>Local gatherings, barangay programs, and community celebrations.</p>
 
-<a href="community-event-3.html" class="inner-event-item">
-<strong>Thanksgiving Event</strong>
-<span>Reliable setup for community thanksgiving and special gatherings.</span>
-</a>
-</div>
+            <div class="inner-event-list">
+              <a href="community-event-1.html" class="inner-event-item">
+                <strong>Barangay Fiesta</strong>
+                <span>Professional sound setup for a lively community celebration.</span>
+              </a>
+              <a href="community-event-2.html" class="inner-event-item">
+                <strong>Community Night Program</strong>
+                <span>Audio support for local evening activities and presentations.</span>
+              </a>
+              <a href="community-event-3.html" class="inner-event-item">
+                <strong>Thanksgiving Event</strong>
+                <span>Reliable setup for community thanksgiving and special gatherings.</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
-</div>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="section-subtitle">
+        Sound service you can count on for small and big occasions in Tuguegarao and Cagayan Valley.
+      </p>
 
-</div>
-</div>
-</section>
+      <div class="info-box">
+        <p>
+          Glenn-Sha Lights & Sounds is committed to providing clear audio,
+          smooth setup, and dependable event support.
+        </p>
+        <p>
+          Our goal is to make every celebration more lively, organized,
+          and memorable through quality service and professional presentation.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<section id="about">
-<div class="container">
-<h2>About Us</h2>
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">
+        Reach out to us for bookings and inquiries in Tuguegarao, Claveria, and nearby areas in Cagayan Valley.
+      </p>
 
-<div class="info-box">
-<p>
-Glenn-Sha Lights & Sounds is committed to providing clear audio,
-smooth setup, and dependable event support.
-</p>
-<p>
-Our goal is to make every celebration more lively, organized,
-and memorable through quality service and professional presentation.
-</p>
-</div>
+      <div class="info-box contact-lines">
+        <p><strong>Phone:</strong> 09052063706</p>
+        <p><strong>Email address:</strong> <a href="mailto:glennsha.lights@gmail.com">glennsha.lights@gmail.com</a></p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1AFpgwCBfH/" target="_blank">Visit our Facebook Page</a></p>
+        <p><strong>Location:</strong> Kapannikian, Claveria, Cagayan Valley (Serving Tuguegarao City and nearby areas)</p>
+      </div>
+    </div>
+  </section>
 
-</div>
-</section>
+  <div class="back-home-wrapper">
+    <a href="#home" class="back-home-btn">← Back to Home</a>
+  </div>
 
-<section id="contact">
-<div class="container">
-<h2>Contact Us</h2>
-
-<div class="info-box">
-<p><strong>Phone:</strong> 09052063706</p>
-<p><strong>Email:</strong> glennsha.lights@gmail.com</p>
-<p><strong>Location:</strong> Kapannikian, Claveria, Cagayan Valley</p>
-</div>
-
-</div>
-</section>
-
-<footer>
-© 2026 Glenn-Sha Lights & Sounds
-</footer>
+  <footer>
+    © 2026 Glenn-Sha Lights & Sounds | Bringing life to your events
+  </footer>
 
 </body>
 </html>
