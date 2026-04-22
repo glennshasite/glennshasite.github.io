@@ -38,6 +38,7 @@
 
     a {
       text-decoration: none;
+      color: inherit;
     }
 
     img {
@@ -336,6 +337,10 @@
       gap: 22px;
     }
 
+    .services-grid > a {
+      display: block;
+    }
+
     .service-card {
       position: relative;
       overflow: hidden;
@@ -348,6 +353,7 @@
       transition: all 0.35s ease;
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
+      height: 100%;
     }
 
     .service-card::before {
@@ -451,6 +457,11 @@
       gap: 22px;
     }
 
+    .portfolio-link {
+      display: block;
+      height: 100%;
+    }
+
     .portfolio-card {
       position: relative;
       background: linear-gradient(180deg, #171721, #12121a);
@@ -459,6 +470,7 @@
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
       transition: 0.35s ease;
+      height: 100%;
     }
 
     .portfolio-card:hover {
@@ -767,42 +779,46 @@
         and across Cagayan Valley.
       </p>
 
-      <a href="birthday-sound-system.html">
-  <div class="service-card">
-    <div class="top-line"></div>
-    <h3>Birthday & Debut</h3>
-    <p>Complete sound setup for fun, lively, and memorable celebrations.</p>
-  </div>
-</a>
+      <div class="services-grid">
+        <a href="birthday-sound-system.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Birthday & Debut</h3>
+            <p>Complete sound setup for fun, lively, and memorable celebrations.</p>
+          </div>
+        </a>
 
         <a href="wedding-sound-system.html">
-  <div class="service-card">
-    <div class="top-line"></div>
-    <h3>Wedding Events</h3>
-    <p>Clean and elegant audio setup for your most special day.</p>
-  </div>
-</a>
-
-        <div class="service-card">
-          <div class="top-line"></div>
-          <h3>School Events</h3>
-          <p>Reliable sound for programs, performances, and recognition events.</p>
-        </div>
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Wedding Events</h3>
+            <p>Clean and elegant audio setup for your most special day.</p>
+          </div>
+        </a>
 
         <a href="school-event-sound.html">
-  <div class="service-card">
-    <div class="top-line"></div>
-    <h3>School Events</h3>
-    <p>Reliable sound for programs, performances, and recognition events.</p>
-  </div>
-</a>
-       <a href="community-event-sound.html">
-  <div class="service-card">
-    <div class="top-line"></div>
-    <h3>Community Events</h3>
-    <p>Quality audio service for barangay and local celebrations.</p>
-  </div>
-</a
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>School Events</h3>
+            <p>Reliable sound for programs, performances, and recognition events.</p>
+          </div>
+        </a>
+
+        <a href="corporate-event-sound.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Corporate Events</h3>
+            <p>Professional setup for launches, presentations, and formal gatherings.</p>
+          </div>
+        </a>
+
+        <a href="community-event-sound.html">
+          <div class="service-card">
+            <div class="top-line"></div>
+            <h3>Community Events</h3>
+            <p>Quality audio service for barangay and local celebrations.</p>
+          </div>
+        </a>
 
         <div class="service-card">
           <div class="top-line"></div>
@@ -834,37 +850,45 @@
       </p>
 
       <div class="portfolio-grid">
-        <div class="portfolio-card">
-          <img src="event1.jpg" alt="Birthday and Debut Event Sound Setup in Cagayan Valley">
-          <div class="portfolio-content">
-            <h3>Birthday & Debut</h3>
-            <p>Sound system setup for lively and memorable celebrations.</p>
+        <a href="birthday-sound-system.html" class="portfolio-link">
+          <div class="portfolio-card">
+            <img src="event1.jpg" alt="Birthday and Debut Event Sound Setup in Cagayan Valley">
+            <div class="portfolio-content">
+              <h3>Birthday & Debut</h3>
+              <p>Sound system setup for lively and memorable celebrations.</p>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <div class="portfolio-card">
-          <img src="event2.jpg" alt="Wedding Event Sound System in Tuguegarao">
-          <div class="portfolio-content">
-            <h3>Wedding Event</h3>
-            <p>Elegant audio support for your most special day.</p>
+        <a href="wedding-sound-system.html" class="portfolio-link">
+          <div class="portfolio-card">
+            <img src="event2.jpg" alt="Wedding Event Sound System in Tuguegarao">
+            <div class="portfolio-content">
+              <h3>Wedding Event</h3>
+              <p>Elegant audio support for your most special day.</p>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <div class="portfolio-card">
-          <img src="event3.jpg" alt="School Program Audio Setup in Cagayan">
-          <div class="portfolio-content">
-            <h3>School Program</h3>
-            <p>Reliable setup for performances, recognition, and school gatherings.</p>
+        <a href="school-event-sound.html" class="portfolio-link">
+          <div class="portfolio-card">
+            <img src="event3.jpg" alt="School Program Audio Setup in Cagayan">
+            <div class="portfolio-content">
+              <h3>School Program</h3>
+              <p>Reliable setup for performances, recognition, and school gatherings.</p>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <div class="portfolio-card">
-          <img src="event4.jpg" alt="Community Event Sound Service in Claveria Cagayan">
-          <div class="portfolio-content">
-            <h3>Community Event</h3>
-            <p>Professional sound service for barangay and local occasions.</p>
+        <a href="community-event-sound.html" class="portfolio-link">
+          <div class="portfolio-card">
+            <img src="event4.jpg" alt="Community Event Sound Service in Claveria Cagayan">
+            <div class="portfolio-content">
+              <h3>Community Event</h3>
+              <p>Professional sound service for barangay and local occasions.</p>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
