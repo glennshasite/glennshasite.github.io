@@ -18,6 +18,39 @@
   <meta property="og:image" content="event1.jpg" />
 
   <link rel="stylesheet" href="event.css" />
+
+  <style>
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+  </style>
 </head>
 <body>
 
@@ -131,6 +164,7 @@
     </div>
   </section>
 
+  <!-- EDITED SECTION ONLY -->
   <section>
     <div class="container">
       <h2 class="section-title">Birthday Event Highlights</h2>
@@ -139,30 +173,37 @@
       </p>
 
       <div class="gallery-grid">
-        <div class="gallery-card">
-          <img src="event1.jpg" alt="Birthday sound system setup in Cagayan Valley">
+
+        <div class="gallery-card" onclick="openLightbox('event1.jpg')">
+          <img src="event1.jpg">
           <div class="gallery-content">
             <h3>Birthday Celebration</h3>
             <p>Fun and lively audio support for memorable birthday events.</p>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="event2.jpg" alt="Party setup with sound system in Tuguegarao">
+        <div class="gallery-card" onclick="openLightbox('event2.jpg')">
+          <img src="event2.jpg">
           <div class="gallery-content">
             <h3>Party Setup</h3>
             <p>Audio service for family gatherings, games, and entertainment segments.</p>
           </div>
         </div>
 
-        <div class="gallery-card">
-          <img src="event3.jpg" alt="Event sound and microphone setup for birthday program">
+        <div class="gallery-card" onclick="openLightbox('event3.jpg')">
+          <img src="event3.jpg">
           <div class="gallery-content">
             <h3>Program Support</h3>
             <p>Microphones and sound support for speaking parts and special presentations.</p>
           </div>
         </div>
+
       </div>
+
+      <div style="text-align:center; margin-top:30px;">
+        <a href="birthday-gallery.html" class="btn btn-primary">View Full Gallery</a>
+      </div>
+
     </div>
   </section>
 
@@ -183,13 +224,31 @@
     </div>
   </section>
 
+  <!-- BACK BUTTON FIX -->
   <div class="back-home-wrapper">
-    <a href="index.html" class="back-home-btn">← Back to Home</a>
+    <a href="index.html#services" class="back-home-btn">← Back to Services</a>
   </div>
 
   <footer>
     © 2026 Glenn-Sha Lights & Sounds | Birthday Sound System Rental in Tuguegarao & Cagayan Valley
   </footer>
+
+  <!-- LIGHTBOX SCRIPT -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">✕</span>
+    <img id="lightbox-img">
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox").classList.add("active");
+      document.getElementById("lightbox-img").src = src;
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("active");
+    }
+  </script>
 
 </body>
 </html>
