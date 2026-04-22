@@ -32,6 +32,97 @@
       display: block;
     }
 
+    /* NAVBAR */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(8, 8, 13, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .nav-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(255, 159, 67, 0.28);
+    }
+
+    .nav-brand-text {
+      line-height: 1.1;
+    }
+
+    .nav-brand-text strong {
+      display: block;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-brand-text span {
+      display: block;
+      font-size: 12px;
+      color: #ffb347;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: #f3f3f3;
+      font-size: 14px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 179, 71, 0.2);
+      color: #ffb347;
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white !important;
+      box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
+    }
+
+    .nav-cta:hover {
+      color: white !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(255, 123, 0, 0.32);
+    }
+
     /* HERO */
     .hero-section {
       position: relative;
@@ -51,6 +142,8 @@
       position: absolute;
       inset: 0;
       backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      pointer-events: none;
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.18),
@@ -74,6 +167,7 @@
       padding: 42px;
       box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .hero-left {
@@ -87,6 +181,8 @@
       max-width: 360px;
       height: auto;
       object-fit: contain;
+      filter: drop-shadow(0 0 16px rgba(255, 159, 67, 0.35));
+      animation: logoFloat 3.2s ease-in-out infinite;
     }
 
     .hero-right {
@@ -103,6 +199,7 @@
       background: rgba(255, 255, 255, 0.08);
       color: #f0f0f0;
       margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .hero-right h1 {
@@ -110,6 +207,7 @@
       line-height: 1.1;
       margin-bottom: 8px;
       color: #ffffff;
+      text-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
     }
 
     .hero-right h2 {
@@ -117,6 +215,7 @@
       color: #ff9f43;
       margin-bottom: 16px;
       font-weight: 700;
+      text-shadow: 0 0 16px rgba(255, 159, 67, 0.2);
     }
 
     .hero-text {
@@ -134,10 +233,13 @@
     }
 
     .btn {
+      position: relative;
+      z-index: 5;
+      cursor: pointer;
       padding: 13px 24px;
       border-radius: 999px;
       font-weight: bold;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
       display: inline-block;
       text-align: center;
     }
@@ -145,10 +247,12 @@
     .btn-primary {
       background: linear-gradient(90deg, #ff7b00, #ffb347);
       color: white;
+      box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 26px rgba(255, 123, 0, 0.34);
     }
 
     .btn-secondary {
@@ -158,8 +262,9 @@
     }
 
     .btn-secondary:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
       background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(255, 179, 71, 0.25);
     }
 
     .hero-tags {
@@ -175,6 +280,13 @@
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.08);
       color: #f2f2f2;
+      transition: 0.3s ease;
+    }
+
+    .hero-tags span:hover {
+      border-color: rgba(255, 179, 71, 0.22);
+      color: #ffcf8d;
+      transform: translateY(-2px);
     }
 
     /* GENERAL SECTIONS */
@@ -191,6 +303,18 @@
       text-align: center;
       font-size: 38px;
       margin-bottom: 14px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 72px;
+      height: 3px;
+      margin: 12px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      box-shadow: 0 0 10px rgba(255, 123, 0, 0.28);
     }
 
     .section-subtitle {
@@ -209,23 +333,105 @@
     }
 
     .service-card {
-      background: linear-gradient(180deg, #171721, #12121a);
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(23, 23, 33, 0.96), rgba(18, 18, 26, 0.96));
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 20px;
       padding: 30px 24px;
       text-align: center;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-      transition: 0.3s ease;
+      transition: all 0.35s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: 20px;
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(255, 179, 71, 0.22),
+        rgba(255, 255, 255, 0.06)
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+      opacity: 0.55;
+      transition: opacity 0.35s ease;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      top: -120%;
+      left: -40%;
+      width: 55%;
+      height: 260%;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.06) 35%,
+        rgba(255, 255, 255, 0.18) 50%,
+        rgba(255, 255, 255, 0.06) 65%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(18deg) translateX(-220%);
+      transition: transform 0.9s ease;
+      pointer-events: none;
+    }
+
+    .service-card .top-line {
+      position: absolute;
+      top: 14px;
+      left: 18px;
+      width: 46px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      box-shadow:
+        0 0 8px rgba(255, 123, 0, 0.55),
+        0 0 16px rgba(255, 123, 0, 0.24);
+      z-index: 1;
+      transition: 0.35s ease;
     }
 
     .service-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px) scale(1.015);
+      box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.30),
+        0 0 16px rgba(255, 179, 71, 0.12);
+      border-color: rgba(255, 179, 71, 0.16);
+    }
+
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-card:hover::after {
+      transform: rotate(18deg) translateX(340%);
+    }
+
+    .service-card:hover .top-line {
+      width: 76px;
+    }
+
+    .service-card h3,
+    .service-card p {
+      position: relative;
+      z-index: 1;
     }
 
     .service-card h3 {
       font-size: 22px;
       margin-bottom: 10px;
       color: #ffffff;
+      padding-top: 10px;
     }
 
     .service-card p {
@@ -241,16 +447,19 @@
     }
 
     .portfolio-card {
+      position: relative;
       background: linear-gradient(180deg, #171721, #12121a);
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-      transition: 0.3s ease;
+      transition: 0.35s ease;
     }
 
     .portfolio-card:hover {
       transform: translateY(-6px);
+      border-color: rgba(255, 179, 71, 0.18);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26);
     }
 
     .portfolio-card img {
@@ -258,6 +467,11 @@
       height: 220px;
       object-fit: cover;
       display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.05);
     }
 
     .portfolio-content {
@@ -280,12 +494,21 @@
     .info-box {
       max-width: 860px;
       margin: auto;
-      background: linear-gradient(180deg, #171721, #12121a);
+      background: linear-gradient(180deg, rgba(23, 23, 33, 0.96), rgba(18, 18, 26, 0.96));
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 22px;
       padding: 34px 26px;
       text-align: center;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+      transition: 0.35s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .info-box:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 179, 71, 0.14);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
     }
 
     .info-box p {
@@ -296,6 +519,14 @@
 
     .contact-lines p {
       margin-bottom: 12px;
+    }
+
+    .contact-lines a {
+      color: #ffb347;
+    }
+
+    .contact-lines a:hover {
+      color: #ffd49a;
     }
 
     /* BACK HOME */
@@ -318,6 +549,12 @@
       box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
       display: inline-block;
       font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .back-home-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 26px rgba(255, 123, 0, 0.32);
     }
 
     /* FOOTER */
@@ -332,6 +569,19 @@
 
     /* TABLET */
     @media (max-width: 992px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-brand {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
       .hero-box {
         grid-template-columns: 1fr;
         text-align: center;
@@ -368,6 +618,23 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
+      .site-nav {
+        position: sticky;
+      }
+
+      .nav-inner {
+        padding: 12px 14px;
+      }
+
+      .nav-links {
+        gap: 8px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+
       .hero-section {
         padding: 24px 14px;
       }
@@ -420,9 +687,38 @@
         min-width: 220px;
       }
     }
+
+    @keyframes logoFloat {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
   </style>
 </head>
 <body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand">
+        <img src="logo1.png" alt="Glen-Sha Logo" class="nav-logo">
+        <div class="nav-brand-text">
+          <strong>Glenn-Sha</strong>
+          <span>Lights & Sounds</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Highlights</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+    </div>
+  </nav>
 
   <header id="home" class="hero-section">
     <div class="hero-box">
@@ -433,7 +729,7 @@
       <div class="hero-right">
         <p class="hero-label">Professional Event Audio Service</p>
 
-        <h1>Glen-Sha</h1>
+        <h1>Glenn-Sha</h1>
         <h2>Lights & Sounds</h2>
 
         <p class="hero-text">
@@ -468,44 +764,52 @@
 
       <div class="services-grid">
         <div class="service-card">
+          <div class="top-line"></div>
           <h3>Birthday & Debut</h3>
           <p>Complete sound setup for fun, lively, and memorable celebrations.</p>
         </div>
 
         <div class="service-card">
+          <div class="top-line"></div>
           <h3>Weddings</h3>
           <p>Clean and elegant audio setup for your most special day.</p>
         </div>
 
         <div class="service-card">
+          <div class="top-line"></div>
           <h3>School Events</h3>
           <p>Reliable sound for programs, performances, and recognition events.</p>
         </div>
 
         <div class="service-card">
+          <div class="top-line"></div>
           <h3>Corporate Events</h3>
           <p>Professional setup for launches, presentations, and formal gatherings.</p>
         </div>
 
         <div class="service-card">
+          <div class="top-line"></div>
           <h3>Community Events</h3>
           <p>Quality audio service for barangay and local celebrations.</p>
         </div>
 
         <div class="service-card">
+          <div class="top-line"></div>
           <h3>Videoke Rental</h3>
           <p>Affordable videoke rental for parties, family gatherings, and special occasions.</p>
         </div>
 
         <div class="service-card">
+          <div class="top-line"></div>
           <h3>Fuzzy Wire Souvenir</h3>
           <p>Handcrafted fuzzy wire souvenirs perfect for birthdays, weddings, debuts, and special events.</p>
         </div>
 
         <div class="service-card">
-<h3>Electronic Repair Services</h3>
-  <p>We repair TVs, speakers, amplifiers, mixers, microphones, and other electronic devices.</p>
-</div>
+          <div class="top-line"></div>
+          <h3>Electronic Repair Services</h3>
+          <p>We repair TVs, speakers, amplifiers, mixers, microphones, and other electronic devices.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -562,7 +866,7 @@
 
       <div class="info-box">
         <p>
-          Glen-Sha Lights & Sounds is committed to providing clear audio,
+          Glenn-Sha Lights & Sounds is committed to providing clear audio,
           smooth setup, and dependable event support.
         </p>
         <p>
@@ -582,9 +886,9 @@
 
       <div class="info-box contact-lines">
         <p><strong>Phone:</strong> 09052063706</p>
-        <p><strong>Email address:</strong> <a href="mailto:glennsha.lights@gmail.com" style="color:#ffb347;">glennsha.lights@gmail.com</a></p>
-        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1AFpgwCBfH/" target="_blank" style="color:#ffb347;">Visit our Facebook Page</a></p>
-       <p><strong>Location:</strong> Kapannikian, Claveria, Cagayan Valley</p>
+        <p><strong>Email address:</strong> <a href="mailto:glennsha.lights@gmail.com">glennsha.lights@gmail.com</a></p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1AFpgwCBfH/" target="_blank">Visit our Facebook Page</a></p>
+        <p><strong>Location:</strong> Kapannikian, Claveria, Cagayan Valley</p>
       </div>
     </div>
   </section>
