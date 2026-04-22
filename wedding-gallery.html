@@ -104,6 +104,25 @@
       font-size: 30px;
       cursor: pointer;
     }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      cursor: pointer;
+      padding: 10px;
+      color: white;
+      user-select: none;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
   </style>
 </head>
 
@@ -144,11 +163,24 @@
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <span class="close" onclick="closeLightbox()">✕</span>
+  <span class="nav prev" onclick="prevImage()">❮</span>
   <img id="lightbox-img">
+  <span class="nav next" onclick="nextImage()">❯</span>
 </div>
 
 <script>
+  let images = [
+    "event1.jpg",
+    "event2.jpg",
+    "event3.jpg",
+    "event4.jpg"
+  ];
+
+  let currentIndex = 0;
+  let startX = 0;
+
   function openLightbox(src) {
+    currentIndex = images.indexOf(src);
     document.getElementById("lightbox").classList.add("active");
     document.getElementById("lightbox-img").src = src;
   }
@@ -156,6 +188,35 @@
   function closeLightbox() {
     document.getElementById("lightbox").classList.remove("active");
   }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    document.getElementById("lightbox-img").src = images[currentIndex];
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (!document.getElementById("lightbox").classList.contains("active")) return;
+
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") prevImage();
+  });
+
+  document.getElementById("lightbox").addEventListener("touchstart", function(e) {
+    startX = e.touches[0].clientX;
+  });
+
+  document.getElementById("lightbox").addEventListener("touchend", function(e) {
+    let endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50) nextImage();
+    if (endX - startX > 50) prevImage();
+  });
 </script>
 
 </body>
