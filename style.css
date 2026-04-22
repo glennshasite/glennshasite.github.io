@@ -221,3 +221,18 @@ footer {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
+.service-card .top-line {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  width: 40px;
+  height: 3px;
+  border-radius: 10px;
+
+  background: linear-gradient(90deg, #ff7b00, #ffb347);
+
+  box-shadow:
+    0 0 8px rgba(255,123,0,0.6),
+    0 0 16px rgba(255,123,0,0.4);
+}
+
