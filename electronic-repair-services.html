@@ -1,1 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Electronic Repair Services | Glenn-Sha Lights & Sounds</title>
+  <meta name="description" content="We repair TVs, speakers, amplifiers, mixers, microphones, and other electronic devices in Tuguegarao, Claveria, and nearby areas." />
+  <meta name="theme-color" content="#090910" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #090910;
+      color: white;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* NAV */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(8, 8, 13, 0.85);
+      padding: 14px 20px;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand strong {
+      font-size: 16px;
+    }
+
+    .nav-brand span {
+      font-size: 12px;
+      color: #ffb347;
+    }
+
+    .nav-links a {
+      margin-left: 12px;
+      font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 70px 20px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    /* SECTION */
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    /* SERVICES LIST */
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    /* INFO BOX */
+    .info-box {
+      max-width: 800px;
+      margin: 40px auto 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .info-box p {
+      margin-bottom: 10px;
+      color: #ddd;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white;
+      font-weight: bold;
+    }
+
+    .back {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-brand">
+        <strong>Glenn-Sha</strong><br>
+        <span>Lights & Sounds</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Electronic Repair Services</h1>
+      <p>
+        We provide reliable repair services for various electronic devices,
+        helping restore functionality and performance.
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">Devices We Repair</h2>
+      <p class="section-subtitle">
+        We handle common electronic equipment used at home and events.
+      </p>
+
+      <div class="service-list">
+
+        <div class="service-card">
+          <h3>TV Repair</h3>
+          <p>Fixing display, power, and common TV issues.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Speakers</h3>
+          <p>Repair of sound problems and damaged components.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Amplifiers</h3>
+          <p>Troubleshooting and restoring amplifier performance.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Mixers</h3>
+          <p>Fixing audio mixer issues for event setups.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Microphones</h3>
+          <p>Repair and maintenance for wired and wireless mics.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Other Devices</h3>
+          <p>General repair services for various electronics.</p>
+        </div>
+
+      </div>
+
+      <div class="info-box">
+        <p>📍 Available in Claveria, Tuguegarao, and nearby areas</p>
+        <p>📞 Contact us for diagnosis and repair inquiries</p>
+      </div>
+
+      <div class="back">
+        <a href="index.html#services" class="btn">← Back to Services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Glenn-Sha Lights & Sounds
+  </footer>
+
+</body>
+</html>
