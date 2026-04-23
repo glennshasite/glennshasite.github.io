@@ -66,7 +66,7 @@
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
-        <a href="index.html#portfolio">Highlights</a>
+        <a href="index.html#portfolio">Events</a>
         <a href="index.html#about">About</a>
         <a href="index.html#contact" class="nav-cta">Contact</a>
       </div>
@@ -165,45 +165,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <h2 class="section-title">School Event Highlights</h2>
-      <p class="section-subtitle">
-        Sample moments and setups from school programs and events we have handled.
-      </p>
-
-      <div class="gallery-grid">
-        <div class="gallery-card" onclick="openLightbox('event3.jpg')">
-          <img src="event3.jpg" alt="School program sound system setup in Cagayan Valley">
-          <div class="gallery-content">
-            <h3>School Program</h3>
-            <p>Clear and organized audio setup for formal school activities.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card" onclick="openLightbox('event1.jpg')">
-          <img src="event1.jpg" alt="Student performance sound setup in Tuguegarao">
-          <div class="gallery-content">
-            <h3>Student Performance</h3>
-            <p>Audio support for dances, presentations, and performances.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card" onclick="openLightbox('event2.jpg')">
-          <img src="event2.jpg" alt="Graduation sound system in Claveria Cagayan">
-          <div class="gallery-content">
-            <h3>Graduation & Recognition</h3>
-            <p>Reliable sound system for graduation ceremonies and awarding events.</p>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-top:30px;">
-        <a href="school-gallery.html" class="btn btn-primary">View Full Gallery</a>
-      </div>
-    </div>
-  </section>
-
   <section id="contact-service">
     <div class="container">
       <h2 class="section-title">Book This Service</h2>
@@ -228,22 +189,6 @@
   <footer>
     © 2026 Glenn-Sha Lights & Sounds | School Event Sound System in Tuguegarao & Cagayan Valley
   </footer>
-
-  <div class="lightbox" id="lightbox">
-    <span class="close" onclick="closeLightbox()">✕</span>
-    <img id="lightbox-img">
-  </div>
-
-  <script>
-    function openLightbox(src) {
-      document.getElementById("lightbox").classList.add("active");
-      document.getElementById("lightbox-img").src = src;
-    }
-
-    function closeLightbox() {
-      document.getElementById("lightbox").classList.remove("active");
-    }
-  </script>
 
 </body>
 </html>
