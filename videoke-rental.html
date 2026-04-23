@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Videoke Rental | Glenn-Sha Lights & Sounds</title>
-  <meta name="description" content="Affordable videoke rental for birthdays, family gatherings, parties, and special events. Glenn-Sha Lights & Sounds offers reliable videoke rental service in Tuguegarao, Claveria, and nearby areas." />
-  <meta name="keywords" content="videoke rental Tuguegarao, karaoke rental Claveria, videoke for birthday party, Glenn-Sha Lights and Sounds, karaoke setup Cagayan Valley" />
-  <meta name="theme-color" content="#0b0b12" />
+  <meta name="description" content="Affordable videoke rental for birthdays, family gatherings, and special occasions in Tuguegarao, Claveria, and nearby areas." />
+  <meta name="keywords" content="videoke rental Tuguegarao, karaoke rental Claveria, Glenn-Sha Lights and Sounds, videoke service Cagayan Valley" />
+  <meta name="theme-color" content="#090910" />
 
   <style>
     * {
@@ -16,30 +16,14 @@
       box-sizing: border-box;
     }
 
-    :root {
-      --bg: #090910;
-      --card: rgba(255, 255, 255, 0.06);
-      --card-border: rgba(255, 255, 255, 0.10);
-      --text: #f5f7fb;
-      --muted: #b6bfd0;
-      --accent: #ff3cac;
-      --accent2: #784ba0;
-      --accent3: #2b86c5;
-      --gold: #ffd76a;
-      --shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
-    }
-
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(255, 60, 172, 0.18), transparent 30%),
-        radial-gradient(circle at top right, rgba(43, 134, 197, 0.18), transparent 30%),
-        linear-gradient(135deg, #090910, #111321 55%, #16192b);
-      color: var(--text);
+      font-family: Arial, sans-serif;
+      background: #090910;
+      color: white;
       line-height: 1.6;
     }
 
@@ -48,829 +32,303 @@
       color: inherit;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     .container {
-      width: min(1150px, 92%);
+      max-width: 1000px;
       margin: auto;
+      padding: 0 20px;
     }
 
-    /* NAV */
-    .navbar {
+    .site-nav {
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
+      width: 100%;
       backdrop-filter: blur(12px);
-      background: rgba(8, 8, 14, 0.72);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      -webkit-backdrop-filter: blur(12px);
+      background: rgba(8, 8, 13, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .nav-wrap {
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 16px 0;
+      justify-content: space-between;
       gap: 18px;
     }
 
-    .brand {
+    .nav-brand {
       display: flex;
       align-items: center;
-      gap: 12px;
     }
 
-    .brand-logo {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
-      display: grid;
-      place-items: center;
-      font-size: 22px;
-      box-shadow: 0 6px 18px rgba(255, 60, 172, 0.30);
+    .nav-brand-text strong {
+      display: block;
+      font-size: 16px;
+      color: #fff;
     }
 
-    .brand-text h1 {
-      font-size: 18px;
-      line-height: 1.1;
-      letter-spacing: 0.3px;
-    }
-
-    .brand-text p {
+    .nav-brand-text span {
+      display: block;
       font-size: 12px;
-      color: var(--muted);
+      color: #ffb347;
     }
 
     .nav-links {
       display: flex;
-      gap: 18px;
       align-items: center;
+      gap: 10px;
       flex-wrap: wrap;
     }
 
     .nav-links a {
-      color: #e9edf7;
+      color: #f3f3f3;
       font-size: 14px;
-      transition: 0.25s ease;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: 0.3s ease;
     }
 
     .nav-links a:hover {
-      color: var(--gold);
+      color: #ffb347;
+      background: rgba(255, 255, 255, 0.06);
     }
 
-    .nav-btn {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: white;
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: bold;
-      font-size: 14px;
-      box-shadow: 0 8px 20px rgba(255, 60, 172, 0.25);
+    .hero-section {
+      padding: 80px 20px 50px;
+      text-align: center;
+      background: linear-gradient(rgba(7, 7, 12, 0.82), rgba(7, 7, 12, 0.92));
     }
 
-    /* HERO */
-    .hero {
-      padding: 90px 0 70px;
+    .hero-section h1 {
+      font-size: 46px;
+      margin-bottom: 12px;
+      color: #fff;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      margin-bottom: 18px;
-      background: rgba(255,255,255,0.08);
-      color: var(--gold);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 0.4px;
-    }
-
-    .hero h2 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.08;
-      margin-bottom: 16px;
-    }
-
-    .hero h2 span {
-      background: linear-gradient(135deg, #ffffff, #ffd76a, #ff78c8);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 640px;
+    .hero-section p {
+      max-width: 760px;
+      margin: 0 auto 24px;
+      color: #d7d7d7;
       font-size: 17px;
-      margin-bottom: 28px;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      padding: 14px 22px;
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
       border-radius: 999px;
       font-weight: bold;
-      font-size: 15px;
-      transition: 0.25s ease;
-      display: inline-block;
+      transition: 0.3s ease;
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(255, 60, 172, 0.28);
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white;
+      box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
     }
 
     .btn-primary:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
     }
 
-    .btn-secondary {
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
-      color: #fff;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.09);
-    }
-
-    .hero-points {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .hero-points span {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #ecf1fb;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-    }
-
-    .hero-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-      border: 1px solid var(--card-border);
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -60px -60px auto;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(255,60,172,0.35), transparent 70%);
-      pointer-events: none;
-    }
-
-    .speaker-icon {
-      font-size: 68px;
-      margin-bottom: 14px;
-    }
-
-    .hero-card h3 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-
-    .hero-card p {
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .mini-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    .mini-box {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .mini-box h4 {
-      font-size: 22px;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-
-    .mini-box p {
-      font-size: 13px;
-      margin: 0;
-    }
-
-    /* SECTION */
     section {
-      padding: 72px 0;
+      padding: 70px 20px;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 42px;
+      font-size: 34px;
+      margin-bottom: 14px;
     }
 
-    .section-title h3 {
-      font-size: clamp(28px, 4vw, 40px);
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      color: var(--muted);
-      max-width: 720px;
-      margin: auto;
+    .section-subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      color: #cccccc;
       font-size: 16px;
     }
 
-    /* FEATURES */
-    .feature-grid {
+    .info-box {
+      max-width: 900px;
+      margin: auto;
+      background: linear-gradient(180deg, rgba(23, 23, 33, 0.96), rgba(18, 18, 26, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 22px;
+      padding: 34px 26px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+    }
+
+    .info-box p {
+      color: #d7d7d7;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .feature-list {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
+      margin-top: 24px;
     }
 
     .feature-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-      transition: 0.25s ease;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
     }
 
-    .feature-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255,255,255,0.18);
-    }
-
-    .feature-card .icon {
-      font-size: 34px;
-      margin-bottom: 14px;
-    }
-
-    .feature-card h4 {
+    .feature-card h3 {
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      color: #ffffff;
     }
 
     .feature-card p {
-      color: var(--muted);
       font-size: 14px;
+      color: #d0d0d0;
     }
 
-    /* PACKAGE */
-    .packages {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .package-card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 26px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .package-card.featured {
-      border: 1px solid rgba(255, 215, 106, 0.35);
-      transform: scale(1.02);
-    }
-
-    .tag {
-      display: inline-block;
-      margin-bottom: 14px;
-      background: rgba(255,255,255,0.08);
-      color: var(--gold);
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .package-card h4 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .price {
-      font-size: 38px;
-      font-weight: bold;
-      margin-bottom: 14px;
-      color: #fff;
-    }
-
-    .price span {
-      font-size: 15px;
-      color: var(--muted);
-      font-weight: normal;
-    }
-
-    .package-card p {
-      color: var(--muted);
-      margin-bottom: 18px;
-      font-size: 14px;
-    }
-
-    .package-card ul {
-      list-style: none;
-      margin-bottom: 22px;
-    }
-
-    .package-card ul li {
-      margin-bottom: 10px;
-      padding-left: 22px;
-      position: relative;
-      color: #eef2fb;
-      font-size: 14px;
-    }
-
-    .package-card ul li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-size: 13px;
-    }
-
-    /* OCCASIONS */
-    .occasion-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .occasion-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 22px;
-      padding: 22px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    .occasion-card .emoji {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .occasion-card h4 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .occasion-card p {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    /* PROCESS */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .step-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: 22px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .step-number {
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      font-weight: bold;
-      margin-bottom: 14px;
-    }
-
-    .step-card h4 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    .step-card p {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* CONTACT */
-    .contact-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .contact-card,
-    .contact-form {
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 26px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-card h4,
-    .contact-form h4 {
-      font-size: 26px;
+    .contact-lines p {
       margin-bottom: 12px;
     }
 
-    .contact-card p,
-    .contact-form p {
-      color: var(--muted);
-      margin-bottom: 18px;
+    .contact-lines a {
+      color: #ffb347;
     }
 
-    .contact-info {
-      display: grid;
-      gap: 14px;
+    .contact-lines a:hover {
+      color: #ffd49a;
     }
 
-    .contact-item {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 16px;
-    }
-
-    .contact-item strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--gold);
-    }
-
-    .form-grid {
-      display: grid;
-      gap: 14px;
-    }
-
-    .form-grid input,
-    .form-grid textarea,
-    .form-grid select {
+    .back-home-wrapper {
       width: 100%;
-      padding: 14px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.06);
-      color: #fff;
-      outline: none;
-      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 40px 0 10px;
     }
 
-    .form-grid input::placeholder,
-    .form-grid textarea::placeholder {
-      color: #b9c2d1;
-    }
-
-    .form-grid textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .form-grid button {
-      padding: 14px 18px;
-      border: none;
+    .back-home-btn {
+      min-width: 220px;
+      padding: 13px 24px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: white;
-      font-weight: bold;
-      font-size: 15px;
-      cursor: pointer;
-      box-shadow: 0 10px 22px rgba(255, 60, 172, 0.25);
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 26px 0 40px;
-      color: var(--muted);
-      font-size: 14px;
       text-align: center;
+      background: linear-gradient(90deg, #ff7b00, #ffb347);
+      color: white;
+      box-shadow: 0 8px 20px rgba(255, 123, 0, 0.22);
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.3s ease;
     }
 
-    footer a {
-      color: var(--gold);
+    .back-home-btn:hover {
+      transform: translateY(-3px);
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .hero-grid,
-      .contact-box,
-      .packages,
-      .feature-grid,
-      .occasion-grid,
-      .steps {
-        grid-template-columns: 1fr 1fr;
-      }
+    footer {
+      padding: 22px 15px;
+      text-align: center;
+      background: #08080d;
+      color: #bfbfbf;
+      font-size: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    @media (max-width: 760px) {
-      .nav-wrap {
+    @media (max-width: 768px) {
+      .nav-inner {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+      }
+
+      .nav-brand {
+        justify-content: center;
       }
 
       .nav-links {
-        gap: 12px;
+        justify-content: center;
       }
 
-      .hero {
-        padding: 70px 0 50px;
+      .hero-section h1 {
+        font-size: 34px;
       }
 
-      .hero-grid,
-      .contact-box,
-      .packages,
-      .feature-grid,
-      .occasion-grid,
-      .steps,
-      .mini-stats {
-        grid-template-columns: 1fr;
+      .hero-section p {
+        font-size: 15px;
       }
 
-      .hero h2 {
-        font-size: 36px;
-      }
-
-      .package-card.featured {
-        transform: none;
+      .section-title {
+        font-size: 28px;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container nav-wrap">
-      <div class="brand">
-        <div class="brand-logo">🎤</div>
-        <div class="brand-text">
-          <h1>Glenn-Sha Lights & Sounds</h1>
-          <p>Videoke Rental Service</p>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-text">
+          <strong>Glenn-Sha</strong>
+          <span>Lights & Sounds</span>
         </div>
-      </div>
+      </a>
 
       <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#packages">Packages</a>
-        <a href="#occasions">Occasions</a>
-        <a href="#contact" class="nav-btn">Book Now</a>
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="hero-badge">Affordable • Reliable • Party-Ready</div>
-        <h2>Fun and hassle-free <span>Videoke Rental</span> for any occasion</h2>
-        <p>
-          Bring life to your celebration with a complete videoke setup perfect for birthdays,
-          family gatherings, fiestas, reunions, and private events. Glenn-Sha Lights & Sounds
-          provides dependable videoke rental service with clear audio and easy setup.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Reserve Your Date</a>
-          <a href="#packages" class="btn-secondary">View Packages</a>
-        </div>
-
-        <div class="hero-points">
-          <span>🎶 Quality sound output</span>
-          <span>🎉 Perfect for parties</span>
-          <span>🚚 Easy delivery setup</span>
-          <span>📍 Tuguegarao & nearby areas</span>
-        </div>
-      </div>
-
-      <div class="hero-card">
-        <div class="speaker-icon">🎤📺</div>
-        <h3>Sing. Celebrate. Enjoy.</h3>
-        <p>
-          Our videoke rental service is designed for simple, enjoyable, and memorable gatherings.
-          Just choose your package and let the fun begin.
-        </p>
-
-        <div class="mini-stats">
-          <div class="mini-box">
-            <h4>Clear Audio</h4>
-            <p>Reliable sound for indoor and small event use</p>
-          </div>
-          <div class="mini-box">
-            <h4>Easy Setup</h4>
-            <p>Fast and convenient for family occasions</p>
-          </div>
-          <div class="mini-box">
-            <h4>Flexible Use</h4>
-            <p>Birthday, reunion, celebration, or casual party</p>
-          </div>
-          <div class="mini-box">
-            <h4>Budget Friendly</h4>
-            <p>Affordable rental packages for your event</p>
-          </div>
-        </div>
-      </div>
+  <header class="hero-section">
+    <div class="container">
+      <h1>Videoke Rental</h1>
+      <p>
+        Affordable videoke rental for birthdays, family gatherings, reunions,
+        and special occasions in Tuguegarao, Claveria, and nearby areas.
+      </p>
+      <a href="index.html#contact" class="btn btn-primary">Book Now</a>
     </div>
   </header>
 
-  <section id="features">
-    <div class="container">
-      <div class="section-title">
-        <h3>What’s included in our videoke rental</h3>
-        <p>
-          A complete and convenient setup for fun singing sessions and small to medium gatherings.
-        </p>
-      </div>
-
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="icon">🎤</div>
-          <h4>Microphones Included</h4>
-          <p>Comes with microphones for solo or duet performances during your celebration.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon">🔊</div>
-          <h4>Clear Sound System</h4>
-          <p>Enjoy good sound quality suitable for house parties and event spaces.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon">📺</div>
-          <h4>Display Ready</h4>
-          <p>Lyrics display support for smooth singing and better guest experience.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="icon">🚚</div>
-          <h4>Setup Assistance</h4>
-          <p>Convenient delivery and setup for a stress-free event preparation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="packages">
-    <div class="container">
-      <div class="section-title">
-        <h3>Videoke rental packages</h3>
-        <p>
-          You can adjust the pricing and inclusions below based on your actual package offer.
-        </p>
-      </div>
-
-      <div class="packages">
-        <div class="package-card">
-          <div class="tag">Basic Package</div>
-          <h4>Home Party</h4>
-          <div class="price">₱1,500 <span>/ event</span></div>
-          <p>Ideal for small family gatherings and simple celebrations at home.</p>
-          <ul>
-            <li>Videoke unit setup</li>
-            <li>Microphones included</li>
-            <li>Suitable for home use</li>
-            <li>Basic sound output</li>
-          </ul>
-          <a href="#contact" class="btn-secondary">Inquire Now</a>
-        </div>
-
-        <div class="package-card featured">
-          <div class="tag">Most Popular</div>
-          <h4>Celebration Package</h4>
-          <div class="price">₱2,500 <span>/ event</span></div>
-          <p>Best for birthdays, reunions, and private gatherings with more guests.</p>
-          <ul>
-            <li>Complete videoke setup</li>
-            <li>Enhanced sound output</li>
-            <li>Good for indoor party events</li>
-            <li>Delivery and setup included</li>
-          </ul>
-          <a href="#contact" class="btn-primary">Book This Package</a>
-        </div>
-
-        <div class="package-card">
-          <div class="tag">Extended Setup</div>
-          <h4>Special Event</h4>
-          <div class="price">₱3,500 <span>/ event</span></div>
-          <p>For larger private occasions needing a stronger setup and longer use.</p>
-          <ul>
-            <li>Full videoke rental package</li>
-            <li>Stronger audio setup</li>
-            <li>Ideal for bigger celebrations</li>
-            <li>Flexible event arrangement</li>
-          </ul>
-          <a href="#contact" class="btn-secondary">Get a Quote</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="occasions">
-    <div class="container">
-      <div class="section-title">
-        <h3>Perfect for these occasions</h3>
-        <p>
-          Our videoke rental service adds fun and entertainment to all kinds of personal events.
-        </p>
-      </div>
-
-      <div class="occasion-grid">
-        <div class="occasion-card">
-          <div class="emoji">🎂</div>
-          <h4>Birthday Parties</h4>
-          <p>Make birthday celebrations more lively and memorable with karaoke fun.</p>
-        </div>
-
-        <div class="occasion-card">
-          <div class="emoji">🏠</div>
-          <h4>Family Gatherings</h4>
-          <p>Perfect for reunions, bonding moments, and simple home celebrations.</p>
-        </div>
-
-        <div class="occasion-card">
-          <div class="emoji">🎊</div>
-          <h4>Private Events</h4>
-          <p>Great for anniversaries, house blessings, and neighborhood occasions.</p>
-        </div>
-
-        <div class="occasion-card">
-          <div class="emoji">🍻</div>
-          <h4>Casual Parties</h4>
-          <p>Bring extra entertainment to barkada nights and special get-togethers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section>
     <div class="container">
-      <div class="section-title">
-        <h3>How booking works</h3>
+      <h2 class="section-title">Our Videoke Service</h2>
+      <p class="section-subtitle">
+        Enjoy fun and memorable celebrations with a videoke rental setup that is simple, reliable, and budget-friendly.
+      </p>
+
+      <div class="info-box">
         <p>
-          Simple process from inquiry to setup.
+          Glenn-Sha Lights & Sounds offers videoke rental service for family parties,
+          birthdays, reunions, and private gatherings.
         </p>
-      </div>
+        <p>
+          We provide a setup that helps make your event more lively, enjoyable, and entertaining for your guests.
+        </p>
 
-      <div class="steps">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h4>Send Inquiry</h4>
-          <p>Message us with your event date, location, and preferred package.</p>
-        </div>
+        <div class="feature-list">
+          <div class="feature-card">
+            <h3>Good Sound Quality</h3>
+            <p>Clear and enjoyable audio for singing sessions and simple celebrations.</p>
+          </div>
 
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h4>Confirm Details</h4>
-          <p>We confirm availability, setup requirements, and rental arrangement.</p>
-        </div>
+          <div class="feature-card">
+            <h3>Easy Setup</h3>
+            <p>Convenient videoke arrangement for home parties and small events.</p>
+          </div>
 
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h4>Reserve Schedule</h4>
-          <p>Secure your booking early to make sure your preferred date is available.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <h4>Enjoy the Event</h4>
-          <p>We deliver and set up so you can focus on enjoying the celebration.</p>
+          <div class="feature-card">
+            <h3>Budget Friendly</h3>
+            <p>Affordable rental option for birthdays, reunions, and casual occasions.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -878,68 +336,26 @@
 
   <section id="contact">
     <div class="container">
-      <div class="contact-box">
-        <div class="contact-card">
-          <h4>Book your videoke rental today</h4>
-          <p>
-            For birthdays, family parties, reunions, and special gatherings, message us for
-            schedule availability and package details.
-          </p>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-subtitle">
+        Reach out to us for videoke rental bookings and inquiries.
+      </p>
 
-          <div class="contact-info">
-            <div class="contact-item">
-              <strong>Service Area</strong>
-              Tuguegarao, Claveria, and nearby areas
-            </div>
-
-            <div class="contact-item">
-              <strong>Contact Number</strong>
-              09XX-XXX-XXXX
-            </div>
-
-            <div class="contact-item">
-              <strong>Facebook Page</strong>
-              Glenn-Sha Lights & Sounds
-            </div>
-
-            <div class="contact-item">
-              <strong>Best for</strong>
-              Videoke rental, birthdays, reunions, family gatherings, private parties
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form">
-          <h4>Quick Inquiry Form</h4>
-          <p>Replace the action later if you want to connect this to email or Formspree.</p>
-
-          <form class="form-grid">
-            <input type="text" placeholder="Your Full Name" required />
-            <input type="tel" placeholder="Your Contact Number" required />
-            <input type="text" placeholder="Event Location" required />
-            <input type="date" required />
-
-            <select required>
-              <option value="">Select Package</option>
-              <option>Home Party</option>
-              <option>Celebration Package</option>
-              <option>Special Event</option>
-            </select>
-
-            <textarea placeholder="Tell us about your event..."></textarea>
-            <button type="submit">Send Inquiry</button>
-          </form>
-        </div>
+      <div class="info-box contact-lines">
+        <p><strong>Phone:</strong> 09052063706</p>
+        <p><strong>Email address:</strong> <a href="mailto:glennsha.lights@gmail.com">glennsha.lights@gmail.com</a></p>
+        <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1AFpgwCBfH/" target="_blank">Visit our Facebook Page</a></p>
+        <p><strong>Location:</strong> Kapannikian, Claveria, Cagayan Valley</p>
       </div>
     </div>
   </section>
 
+  <div class="back-home-wrapper">
+    <a href="index.html#services" class="back-home-btn">← Back to Services</a>
+  </div>
+
   <footer>
-    <div class="container">
-      <p>
-        © 2026 Glenn-Sha Lights & Sounds • Videoke Rental Service • Designed for events and celebrations
-      </p>
-    </div>
+    © 2026 Glenn-Sha Lights & Sounds | Videoke Rental Service
   </footer>
 
 </body>
