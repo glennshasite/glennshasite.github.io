@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,28 +95,42 @@
       margin-bottom: 30px;
     }
 
-    /* LIST */
-    .list-box {
-      max-width: 800px;
-      margin: auto;
+    /* FUZZY GRID */
+    .fuzzy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .fuzzy-card {
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 20px;
-      padding: 30px;
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s ease;
     }
 
-    .list-box ul {
-      list-style: none;
+    .fuzzy-card:hover {
+      transform: translateY(-5px);
     }
 
-    .list-box li {
-      padding: 12px 0;
+    .placeholder {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a24, #111);
+      color: #888;
+      font-size: 14px;
       border-bottom: 1px solid rgba(255,255,255,0.06);
-      font-size: 16px;
+      padding: 10px;
+      text-align: center;
     }
 
-    .list-box li:last-child {
-      border-bottom: none;
+    .fuzzy-card h3 {
+      padding: 12px;
+      font-size: 16px;
     }
 
     /* BUTTON */
@@ -141,6 +154,21 @@
       padding: 20px;
       font-size: 14px;
       color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      .nav-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
@@ -178,42 +206,42 @@
 
       <div class="fuzzy-grid">
 
-  <div class="fuzzy-card">
-    <img src="images/fuzzy-flower.jpg" alt="Fuzzy Wire Flower">
-    <h3>Fuzzy Wire Flower</h3>
-  </div>
+        <div class="fuzzy-card">
+          <div class="placeholder">Photo Coming Soon</div>
+          <h3>Fuzzy Wire Flower</h3>
+        </div>
 
-  <div class="fuzzy-card">
-    <img src="images/fuzzy-bouquet.jpg" alt="Fuzzy Wire Bouquet">
-    <h3>Fuzzy Wire Bouquet</h3>
-  </div>
+        <div class="fuzzy-card">
+          <div class="placeholder">Photo Coming Soon</div>
+          <h3>Fuzzy Wire Bouquet</h3>
+        </div>
 
-  <div class="fuzzy-card">
-    <img src="images/wedding-bouquet.jpg" alt="Wedding Bouquet">
-    <h3>Wedding Bouquet</h3>
-  </div>
+        <div class="fuzzy-card">
+          <div class="placeholder">Photo Coming Soon</div>
+          <h3>Wedding Bouquet</h3>
+        </div>
 
-  <div class="fuzzy-card">
-    <img src="images/vase.jpg" alt="Fuzzy Wire Flower Vase">
-    <h3>Flower Vase</h3>
-  </div>
+        <div class="fuzzy-card">
+          <div class="placeholder">Photo Coming Soon</div>
+          <h3>Fuzzy Wire Flower Vase</h3>
+        </div>
 
-  <div class="fuzzy-card">
-    <img src="images/hairclip.jpg" alt="Fuzzy Wire Hair Clip">
-    <h3>Hair Clip</h3>
-  </div>
+        <div class="fuzzy-card">
+          <div class="placeholder">Photo Coming Soon</div>
+          <h3>Fuzzy Wire Hair Clip</h3>
+        </div>
 
-  <div class="fuzzy-card">
-    <img src="images/keychain.jpg" alt="Fuzzy Wire Keychain">
-    <h3>Keychain</h3>
-  </div>
+        <div class="fuzzy-card">
+          <div class="placeholder">Photo Coming Soon</div>
+          <h3>Fuzzy Wire Keychain</h3>
+        </div>
 
-  <div class="fuzzy-card">
-    <img src="images/headband.jpg" alt="Fuzzy Wire Headband">
-    <h3>Headband</h3>
-  </div>
+        <div class="fuzzy-card">
+          <div class="placeholder">Photo Coming Soon</div>
+          <h3>Fuzzy Wire Headband</h3>
+        </div>
 
-</div>
+      </div>
 
       <div class="back">
         <a href="index.html#services" class="btn">← Back to Services</a>
